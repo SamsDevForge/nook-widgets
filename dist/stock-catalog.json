@@ -1,0 +1,5615 @@
+{
+  "Apple": [
+    {
+      "family": "Clock",
+      "source": "Android \/ Nook data",
+      "detail": "Give your day a little space.",
+      "layouts": [
+        {
+          "id": "Apple\/clock\/0\/Small",
+          "layout": "Analog face",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/clock\/0\/Medium",
+          "layout": "Analog face",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/clock\/0\/Large",
+          "layout": "Analog face",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/clock\/1\/Small",
+          "layout": "Digital · 12 hour",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/clock\/1\/Medium",
+          "layout": "Digital · 12 hour",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/clock\/1\/Large",
+          "layout": "Digital · 12 hour",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/clock\/2\/Small",
+          "layout": "Digital · 24 hour",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/clock\/2\/Medium",
+          "layout": "Digital · 24 hour",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/clock\/2\/Large",
+          "layout": "Digital · 24 hour",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/clock\/3\/Small",
+          "layout": "Stacked digits",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/clock\/3\/Medium",
+          "layout": "Stacked digits",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/clock\/3\/Large",
+          "layout": "Stacked digits",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "World clock",
+      "source": "Android \/ Nook data",
+      "detail": "Keep your cities a little closer.",
+      "layouts": [
+        {
+          "id": "Apple\/worldclock\/0\/Medium",
+          "layout": "Three cities",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/worldclock\/0\/Large",
+          "layout": "Three cities",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/worldclock\/1\/Small",
+          "layout": "One city",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/worldclock\/1\/Medium",
+          "layout": "One city",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/worldclock\/1\/Large",
+          "layout": "One city",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Weather",
+      "source": "Connected city · Open-Meteo",
+      "detail": "Open-Meteo conditions and forecast for the city you choose; no device-location access.",
+      "layouts": [
+        {
+          "id": "Apple\/weather\/0\/Small",
+          "layout": "Current conditions",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/weather\/0\/Medium",
+          "layout": "Current conditions",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/weather\/0\/Large",
+          "layout": "Current conditions",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/weather\/1\/Medium",
+          "layout": "Three-day forecast",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/weather\/1\/Large",
+          "layout": "Three-day forecast",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Photos",
+      "source": "Chosen image",
+      "detail": "A favorite photo, framed your way.",
+      "layouts": [
+        {
+          "id": "Apple\/photos\/0\/Small",
+          "layout": "Fill frame",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/photos\/0\/Medium",
+          "layout": "Fill frame",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/photos\/0\/Large",
+          "layout": "Fill frame",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/photos\/1\/Small",
+          "layout": "Fit whole photo",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/photos\/1\/Medium",
+          "layout": "Fit whole photo",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/photos\/1\/Large",
+          "layout": "Fit whole photo",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Music",
+      "source": "Active Android player",
+      "detail": "Your active player's artwork and controls.",
+      "layouts": [
+        {
+          "id": "Apple\/music\/0\/Small",
+          "layout": "Artwork and controls",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/music\/0\/Medium",
+          "layout": "Artwork and controls",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/music\/0\/Large",
+          "layout": "Artwork and controls",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/music\/1\/Small",
+          "layout": "Simple player",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/music\/1\/Medium",
+          "layout": "Simple player",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/music\/1\/Large",
+          "layout": "Simple player",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Batteries",
+      "source": "Android \/ Nook data",
+      "detail": "Your phone's charge, at a glance.",
+      "layouts": [
+        {
+          "id": "Apple\/battery\/0\/Small",
+          "layout": "Battery ring",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/battery\/0\/Medium",
+          "layout": "Battery ring",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/battery\/0\/Large",
+          "layout": "Battery ring",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/battery\/1\/Small",
+          "layout": "Large percentage",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/battery\/1\/Medium",
+          "layout": "Large percentage",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/battery\/1\/Large",
+          "layout": "Large percentage",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Calendar",
+      "source": "Android \/ Nook data",
+      "detail": "A month of possibilities. Or just this week.",
+      "layouts": [
+        {
+          "id": "Apple\/calendar\/0\/Medium",
+          "layout": "Month",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/calendar\/0\/Large",
+          "layout": "Month",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/calendar\/1\/Small",
+          "layout": "Week",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/calendar\/1\/Medium",
+          "layout": "Week",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/calendar\/1\/Large",
+          "layout": "Week",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Up next",
+      "source": "Android \/ Nook data",
+      "detail": "Your real calendar events, close at hand.",
+      "layouts": [
+        {
+          "id": "Apple\/agenda\/0\/Small",
+          "layout": "Next 7 days",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/agenda\/0\/Medium",
+          "layout": "Next 7 days",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/agenda\/0\/Large",
+          "layout": "Next 7 days",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/agenda\/1\/Small",
+          "layout": "Next 30 days",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/agenda\/1\/Medium",
+          "layout": "Next 30 days",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/agenda\/1\/Large",
+          "layout": "Next 30 days",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Notes",
+      "source": "Android \/ Nook data",
+      "detail": "Catch a thought before it goes.",
+      "layouts": [
+        {
+          "id": "Apple\/notes\/0\/Small",
+          "layout": "One note",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/notes\/0\/Medium",
+          "layout": "One note",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/notes\/0\/Large",
+          "layout": "One note",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/notes\/1\/Small",
+          "layout": "Notes list",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/notes\/1\/Medium",
+          "layout": "Notes list",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/notes\/1\/Large",
+          "layout": "Notes list",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Reminders",
+      "source": "Android \/ Nook data",
+      "detail": "A little nudge, right on time.",
+      "layouts": [
+        {
+          "id": "Apple\/reminders\/0\/Small",
+          "layout": "All upcoming",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/reminders\/0\/Medium",
+          "layout": "All upcoming",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/reminders\/0\/Large",
+          "layout": "All upcoming",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/reminders\/1\/Small",
+          "layout": "Due today and overdue",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/reminders\/1\/Medium",
+          "layout": "Due today and overdue",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/reminders\/1\/Large",
+          "layout": "Due today and overdue",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Countdown",
+      "source": "Android \/ Nook data",
+      "detail": "Count the days to something good.",
+      "layouts": [
+        {
+          "id": "Apple\/countdown\/0\/Small",
+          "layout": "Days until the date",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/countdown\/0\/Medium",
+          "layout": "Days until the date",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/countdown\/0\/Large",
+          "layout": "Days until the date",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/countdown\/1\/Small",
+          "layout": "Count days after the date too",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/countdown\/1\/Medium",
+          "layout": "Count days after the date too",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/countdown\/1\/Large",
+          "layout": "Count days after the date too",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Contacts",
+      "source": "Android \/ Nook data",
+      "detail": "Your people, one tap from the dialer.",
+      "layouts": [
+        {
+          "id": "Apple\/contacts\/0\/Small",
+          "layout": "Three favorites",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/contacts\/0\/Medium",
+          "layout": "Three favorites",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/contacts\/0\/Large",
+          "layout": "Three favorites",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/contacts\/1\/Small",
+          "layout": "One favorite",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/contacts\/1\/Medium",
+          "layout": "One favorite",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/contacts\/1\/Large",
+          "layout": "One favorite",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Files",
+      "source": "Chosen documents",
+      "detail": "Three files you choose through Android's document picker.",
+      "layouts": [
+        {
+          "id": "Apple\/files\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/files\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/files\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/files\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/files\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/files\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Shortcuts",
+      "source": "Android \/ Nook data",
+      "detail": "Launch your chosen installed apps.",
+      "layouts": [
+        {
+          "id": "Apple\/shortcuts\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/shortcuts\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/shortcuts\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/shortcuts\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/shortcuts\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/shortcuts\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Safari reading list",
+      "source": "Android \/ Nook data",
+      "detail": "Your saved web pages, one tap away.",
+      "layouts": [
+        {
+          "id": "Apple\/safari\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/safari\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/safari\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/safari\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/safari\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/safari\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Maps · saved places",
+      "source": "External provider shortcut",
+      "detail": "Open directions to your saved destinations.",
+      "layouts": [
+        {
+          "id": "Apple\/maps\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/maps\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/maps\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/maps\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/maps\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/maps\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Podcasts · active player",
+      "source": "Active Android player",
+      "detail": "Your active player's artwork and controls.",
+      "layouts": [
+        {
+          "id": "Apple\/podcasts\/0\/Small",
+          "layout": "Artwork and controls",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/podcasts\/0\/Medium",
+          "layout": "Artwork and controls",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/podcasts\/0\/Large",
+          "layout": "Artwork and controls",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/podcasts\/1\/Small",
+          "layout": "Simple player",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/podcasts\/1\/Medium",
+          "layout": "Simple player",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/podcasts\/1\/Large",
+          "layout": "Simple player",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Screen Time",
+      "source": "Optional Android usage access",
+      "detail": "Today's Android-reported app time and most-used apps.",
+      "layouts": [
+        {
+          "id": "Apple\/screentime\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/screentime\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/screentime\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/screentime\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/screentime\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/screentime\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Tips",
+      "source": "Android \/ Nook data",
+      "detail": "A small, original tip for your day.",
+      "layouts": [
+        {
+          "id": "Apple\/tips\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/tips\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/tips\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/tips\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/tips\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/tips\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Journal · your notes",
+      "source": "Android \/ Nook data",
+      "detail": "Catch a thought before it goes.",
+      "layouts": [
+        {
+          "id": "Apple\/journal\/0\/Small",
+          "layout": "One note",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/journal\/0\/Medium",
+          "layout": "One note",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/journal\/0\/Large",
+          "layout": "One note",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/journal\/1\/Small",
+          "layout": "Notes list",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/journal\/1\/Medium",
+          "layout": "Notes list",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/journal\/1\/Large",
+          "layout": "Notes list",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "News · your feed",
+      "source": "Connected RSS source",
+      "detail": "Headlines from your selected feed; no Apple News account.",
+      "layouts": [
+        {
+          "id": "Apple\/news\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/news\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/news\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/news\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/news\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/news\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Stocks",
+      "source": "Connected market provider",
+      "detail": "Your provider's quotes and trading date; requires your Alpha Vantage key.",
+      "layouts": [
+        {
+          "id": "Apple\/stocks\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/stocks\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/stocks\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/stocks\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/stocks\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/stocks\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Fitness rings",
+      "source": "Manual log",
+      "detail": "Your own entries; no private health account or automatic sensor history is supplied.",
+      "layouts": [
+        {
+          "id": "Apple\/fitness\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/fitness\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/fitness\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/fitness\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/fitness\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/fitness\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Health · steps log",
+      "source": "Manual log",
+      "detail": "Your own entries; no private health account or automatic sensor history is supplied.",
+      "layouts": [
+        {
+          "id": "Apple\/steps\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/steps\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/steps\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/steps\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/steps\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/steps\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Sleep record",
+      "source": "Manual log",
+      "detail": "Your own entries; no private health account or automatic sensor history is supplied.",
+      "layouts": [
+        {
+          "id": "Apple\/sleep\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/sleep\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/sleep\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/sleep\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/sleep\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/sleep\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Medication check-in",
+      "source": "Manual log",
+      "detail": "Your own entries; no private health account or automatic sensor history is supplied.",
+      "layouts": [
+        {
+          "id": "Apple\/medications\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/medications\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/medications\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/medications\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/medications\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/medications\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Books · reading progress",
+      "source": "Manual log",
+      "detail": "Your own entries; no private health account or automatic sensor history is supplied.",
+      "layouts": [
+        {
+          "id": "Apple\/books\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/books\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/books\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/books\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/books\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/books\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Mail",
+      "source": "Manual \/ app shortcut",
+      "detail": "Manual card or shortcut to your installed mail app. iCloud inbox data is not connected.",
+      "layouts": [
+        {
+          "id": "Apple\/mail\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/mail\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/mail\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/mail\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/mail\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/mail\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Home",
+      "source": "Manual \/ app shortcut",
+      "detail": "Manual card or shortcut to your smart-home app. HomeKit devices and scenes are not connected.",
+      "layouts": [
+        {
+          "id": "Apple\/home\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/home\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/home\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/home\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/home\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/home\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Find My",
+      "source": "Manual \/ app shortcut",
+      "detail": "Shortcut to a device-finding app you choose. Apple people, items and device locations are not supplied.",
+      "layouts": [
+        {
+          "id": "Apple\/findmy\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/findmy\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/findmy\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/findmy\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/findmy\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/findmy\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Wallet",
+      "source": "Manual \/ app shortcut",
+      "detail": "Manual card or shortcut to your wallet app. Cards, balances, passes and payment credentials are not read.",
+      "layouts": [
+        {
+          "id": "Apple\/wallet\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/wallet\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/wallet\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/wallet\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/wallet\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/wallet\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "TV",
+      "source": "Manual \/ app shortcut",
+      "detail": "Shortcut to your video app. Apple viewing history and subscriptions are not connected.",
+      "layouts": [
+        {
+          "id": "Apple\/tv\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/tv\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/tv\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/tv\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/tv\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/tv\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Game Center",
+      "source": "Manual \/ app shortcut",
+      "detail": "Manual card or game-app shortcut. Apple achievements and friends are not connected.",
+      "layouts": [
+        {
+          "id": "Apple\/gamecenter\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/gamecenter\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/gamecenter\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/gamecenter\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/gamecenter\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/gamecenter\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "App Store",
+      "source": "Manual \/ app shortcut",
+      "detail": "Shortcut to your app store. Apple editorial content and account history are not connected.",
+      "layouts": [
+        {
+          "id": "Apple\/appstore\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/appstore\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/appstore\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Apple\/appstore\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Apple\/appstore\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Apple\/appstore\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    }
+  ],
+  "macOS": [
+    {
+      "family": "Clock",
+      "source": "Android \/ Nook data",
+      "detail": "Give your day a little space.",
+      "layouts": [
+        {
+          "id": "macOS\/clock\/0\/Small",
+          "layout": "Analog face",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/clock\/0\/Medium",
+          "layout": "Analog face",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/clock\/0\/Large",
+          "layout": "Analog face",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/clock\/1\/Small",
+          "layout": "Digital · 12 hour",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/clock\/1\/Medium",
+          "layout": "Digital · 12 hour",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/clock\/1\/Large",
+          "layout": "Digital · 12 hour",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/clock\/2\/Small",
+          "layout": "Digital · 24 hour",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/clock\/2\/Medium",
+          "layout": "Digital · 24 hour",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/clock\/2\/Large",
+          "layout": "Digital · 24 hour",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/clock\/3\/Small",
+          "layout": "Stacked digits",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/clock\/3\/Medium",
+          "layout": "Stacked digits",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/clock\/3\/Large",
+          "layout": "Stacked digits",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "World clock",
+      "source": "Android \/ Nook data",
+      "detail": "Keep your cities a little closer.",
+      "layouts": [
+        {
+          "id": "macOS\/worldclock\/0\/Medium",
+          "layout": "Three cities",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/worldclock\/0\/Large",
+          "layout": "Three cities",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/worldclock\/1\/Small",
+          "layout": "One city",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/worldclock\/1\/Medium",
+          "layout": "One city",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/worldclock\/1\/Large",
+          "layout": "One city",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Weather",
+      "source": "Connected city · Open-Meteo",
+      "detail": "Open-Meteo conditions and forecast for the city you choose; no device-location access.",
+      "layouts": [
+        {
+          "id": "macOS\/weather\/0\/Small",
+          "layout": "Current conditions",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/weather\/0\/Medium",
+          "layout": "Current conditions",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/weather\/0\/Large",
+          "layout": "Current conditions",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/weather\/1\/Medium",
+          "layout": "Three-day forecast",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/weather\/1\/Large",
+          "layout": "Three-day forecast",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Photos",
+      "source": "Chosen image",
+      "detail": "A favorite photo, framed your way.",
+      "layouts": [
+        {
+          "id": "macOS\/photos\/0\/Small",
+          "layout": "Fill frame",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/photos\/0\/Medium",
+          "layout": "Fill frame",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/photos\/0\/Large",
+          "layout": "Fill frame",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/photos\/1\/Small",
+          "layout": "Fit whole photo",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/photos\/1\/Medium",
+          "layout": "Fit whole photo",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/photos\/1\/Large",
+          "layout": "Fit whole photo",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Music",
+      "source": "Active Android player",
+      "detail": "Your active player's artwork and controls.",
+      "layouts": [
+        {
+          "id": "macOS\/music\/0\/Small",
+          "layout": "Artwork and controls",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/music\/0\/Medium",
+          "layout": "Artwork and controls",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/music\/0\/Large",
+          "layout": "Artwork and controls",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/music\/1\/Small",
+          "layout": "Simple player",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/music\/1\/Medium",
+          "layout": "Simple player",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/music\/1\/Large",
+          "layout": "Simple player",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Batteries",
+      "source": "Android \/ Nook data",
+      "detail": "Your phone's charge, at a glance.",
+      "layouts": [
+        {
+          "id": "macOS\/battery\/0\/Small",
+          "layout": "Battery ring",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/battery\/0\/Medium",
+          "layout": "Battery ring",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/battery\/0\/Large",
+          "layout": "Battery ring",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/battery\/1\/Small",
+          "layout": "Large percentage",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/battery\/1\/Medium",
+          "layout": "Large percentage",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/battery\/1\/Large",
+          "layout": "Large percentage",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Calendar",
+      "source": "Android \/ Nook data",
+      "detail": "A month of possibilities. Or just this week.",
+      "layouts": [
+        {
+          "id": "macOS\/calendar\/0\/Medium",
+          "layout": "Month",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/calendar\/0\/Large",
+          "layout": "Month",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/calendar\/1\/Small",
+          "layout": "Week",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/calendar\/1\/Medium",
+          "layout": "Week",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/calendar\/1\/Large",
+          "layout": "Week",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Up next",
+      "source": "Android \/ Nook data",
+      "detail": "Your real calendar events, close at hand.",
+      "layouts": [
+        {
+          "id": "macOS\/agenda\/0\/Small",
+          "layout": "Next 7 days",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/agenda\/0\/Medium",
+          "layout": "Next 7 days",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/agenda\/0\/Large",
+          "layout": "Next 7 days",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/agenda\/1\/Small",
+          "layout": "Next 30 days",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/agenda\/1\/Medium",
+          "layout": "Next 30 days",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/agenda\/1\/Large",
+          "layout": "Next 30 days",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Notes",
+      "source": "Android \/ Nook data",
+      "detail": "Catch a thought before it goes.",
+      "layouts": [
+        {
+          "id": "macOS\/notes\/0\/Small",
+          "layout": "One note",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/notes\/0\/Medium",
+          "layout": "One note",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/notes\/0\/Large",
+          "layout": "One note",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/notes\/1\/Small",
+          "layout": "Notes list",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/notes\/1\/Medium",
+          "layout": "Notes list",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/notes\/1\/Large",
+          "layout": "Notes list",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Reminders",
+      "source": "Android \/ Nook data",
+      "detail": "A little nudge, right on time.",
+      "layouts": [
+        {
+          "id": "macOS\/reminders\/0\/Small",
+          "layout": "All upcoming",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/reminders\/0\/Medium",
+          "layout": "All upcoming",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/reminders\/0\/Large",
+          "layout": "All upcoming",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/reminders\/1\/Small",
+          "layout": "Due today and overdue",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/reminders\/1\/Medium",
+          "layout": "Due today and overdue",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/reminders\/1\/Large",
+          "layout": "Due today and overdue",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Countdown",
+      "source": "Android \/ Nook data",
+      "detail": "Count the days to something good.",
+      "layouts": [
+        {
+          "id": "macOS\/countdown\/0\/Small",
+          "layout": "Days until the date",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/countdown\/0\/Medium",
+          "layout": "Days until the date",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/countdown\/0\/Large",
+          "layout": "Days until the date",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/countdown\/1\/Small",
+          "layout": "Count days after the date too",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/countdown\/1\/Medium",
+          "layout": "Count days after the date too",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/countdown\/1\/Large",
+          "layout": "Count days after the date too",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Contacts",
+      "source": "Android \/ Nook data",
+      "detail": "Your people, one tap from the dialer.",
+      "layouts": [
+        {
+          "id": "macOS\/contacts\/0\/Small",
+          "layout": "Three favorites",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/contacts\/0\/Medium",
+          "layout": "Three favorites",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/contacts\/0\/Large",
+          "layout": "Three favorites",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/contacts\/1\/Small",
+          "layout": "One favorite",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/contacts\/1\/Medium",
+          "layout": "One favorite",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/contacts\/1\/Large",
+          "layout": "One favorite",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Files",
+      "source": "Chosen documents",
+      "detail": "Three files you choose through Android's document picker.",
+      "layouts": [
+        {
+          "id": "macOS\/files\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/files\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/files\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/files\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/files\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/files\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Shortcuts",
+      "source": "Android \/ Nook data",
+      "detail": "Launch your chosen installed apps.",
+      "layouts": [
+        {
+          "id": "macOS\/shortcuts\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/shortcuts\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/shortcuts\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/shortcuts\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/shortcuts\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/shortcuts\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Safari reading list",
+      "source": "Android \/ Nook data",
+      "detail": "Your saved web pages, one tap away.",
+      "layouts": [
+        {
+          "id": "macOS\/safari\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/safari\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/safari\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/safari\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/safari\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/safari\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Maps · saved places",
+      "source": "External provider shortcut",
+      "detail": "Open directions to your saved destinations.",
+      "layouts": [
+        {
+          "id": "macOS\/maps\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/maps\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/maps\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/maps\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/maps\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/maps\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Podcasts · active player",
+      "source": "Active Android player",
+      "detail": "Your active player's artwork and controls.",
+      "layouts": [
+        {
+          "id": "macOS\/podcasts\/0\/Small",
+          "layout": "Artwork and controls",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/podcasts\/0\/Medium",
+          "layout": "Artwork and controls",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/podcasts\/0\/Large",
+          "layout": "Artwork and controls",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/podcasts\/1\/Small",
+          "layout": "Simple player",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/podcasts\/1\/Medium",
+          "layout": "Simple player",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/podcasts\/1\/Large",
+          "layout": "Simple player",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Screen Time",
+      "source": "Optional Android usage access",
+      "detail": "Today's Android-reported app time and most-used apps.",
+      "layouts": [
+        {
+          "id": "macOS\/screentime\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/screentime\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/screentime\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/screentime\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/screentime\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/screentime\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Tips",
+      "source": "Android \/ Nook data",
+      "detail": "A small, original tip for your day.",
+      "layouts": [
+        {
+          "id": "macOS\/tips\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/tips\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/tips\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/tips\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/tips\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/tips\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Journal · your notes",
+      "source": "Android \/ Nook data",
+      "detail": "Catch a thought before it goes.",
+      "layouts": [
+        {
+          "id": "macOS\/journal\/0\/Small",
+          "layout": "One note",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/journal\/0\/Medium",
+          "layout": "One note",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/journal\/0\/Large",
+          "layout": "One note",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/journal\/1\/Small",
+          "layout": "Notes list",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/journal\/1\/Medium",
+          "layout": "Notes list",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/journal\/1\/Large",
+          "layout": "Notes list",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "News · your feed",
+      "source": "Connected RSS source",
+      "detail": "Headlines from your selected feed; no Apple News account.",
+      "layouts": [
+        {
+          "id": "macOS\/news\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/news\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/news\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/news\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/news\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/news\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Stocks",
+      "source": "Connected market provider",
+      "detail": "Your provider's quotes and trading date; requires your Alpha Vantage key.",
+      "layouts": [
+        {
+          "id": "macOS\/stocks\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/stocks\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/stocks\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/stocks\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/stocks\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/stocks\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Fitness rings",
+      "source": "Manual log",
+      "detail": "Your own entries; no private health account or automatic sensor history is supplied.",
+      "layouts": [
+        {
+          "id": "macOS\/fitness\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/fitness\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/fitness\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/fitness\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/fitness\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/fitness\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Health · steps log",
+      "source": "Manual log",
+      "detail": "Your own entries; no private health account or automatic sensor history is supplied.",
+      "layouts": [
+        {
+          "id": "macOS\/steps\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/steps\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/steps\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/steps\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/steps\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/steps\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Sleep record",
+      "source": "Manual log",
+      "detail": "Your own entries; no private health account or automatic sensor history is supplied.",
+      "layouts": [
+        {
+          "id": "macOS\/sleep\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/sleep\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/sleep\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/sleep\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/sleep\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/sleep\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Medication check-in",
+      "source": "Manual log",
+      "detail": "Your own entries; no private health account or automatic sensor history is supplied.",
+      "layouts": [
+        {
+          "id": "macOS\/medications\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/medications\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/medications\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/medications\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/medications\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/medications\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Books · reading progress",
+      "source": "Manual log",
+      "detail": "Your own entries; no private health account or automatic sensor history is supplied.",
+      "layouts": [
+        {
+          "id": "macOS\/books\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/books\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/books\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/books\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/books\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/books\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Mail",
+      "source": "Manual \/ app shortcut",
+      "detail": "Manual card or shortcut to your installed mail app. iCloud inbox data is not connected.",
+      "layouts": [
+        {
+          "id": "macOS\/mail\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/mail\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/mail\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/mail\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/mail\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/mail\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Home",
+      "source": "Manual \/ app shortcut",
+      "detail": "Manual card or shortcut to your smart-home app. HomeKit devices and scenes are not connected.",
+      "layouts": [
+        {
+          "id": "macOS\/home\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/home\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/home\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/home\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/home\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/home\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Find My",
+      "source": "Manual \/ app shortcut",
+      "detail": "Shortcut to a device-finding app you choose. Apple people, items and device locations are not supplied.",
+      "layouts": [
+        {
+          "id": "macOS\/findmy\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/findmy\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/findmy\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/findmy\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/findmy\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/findmy\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Wallet",
+      "source": "Manual \/ app shortcut",
+      "detail": "Manual card or shortcut to your wallet app. Cards, balances, passes and payment credentials are not read.",
+      "layouts": [
+        {
+          "id": "macOS\/wallet\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/wallet\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/wallet\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/wallet\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/wallet\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/wallet\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "TV",
+      "source": "Manual \/ app shortcut",
+      "detail": "Shortcut to your video app. Apple viewing history and subscriptions are not connected.",
+      "layouts": [
+        {
+          "id": "macOS\/tv\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/tv\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/tv\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/tv\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/tv\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/tv\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Game Center",
+      "source": "Manual \/ app shortcut",
+      "detail": "Manual card or game-app shortcut. Apple achievements and friends are not connected.",
+      "layouts": [
+        {
+          "id": "macOS\/gamecenter\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/gamecenter\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/gamecenter\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/gamecenter\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/gamecenter\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/gamecenter\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "App Store",
+      "source": "Manual \/ app shortcut",
+      "detail": "Shortcut to your app store. Apple editorial content and account history are not connected.",
+      "layouts": [
+        {
+          "id": "macOS\/appstore\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/appstore\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/appstore\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "macOS\/appstore\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "macOS\/appstore\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "macOS\/appstore\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    }
+  ],
+  "Pixel": [
+    {
+      "family": "Clock",
+      "source": "Android \/ Nook data",
+      "detail": "Give your day a little space.",
+      "layouts": [
+        {
+          "id": "Pixel\/clock\/0\/Small",
+          "layout": "Analog face",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/clock\/0\/Medium",
+          "layout": "Analog face",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/clock\/0\/Large",
+          "layout": "Analog face",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/clock\/1\/Small",
+          "layout": "Digital · 12 hour",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/clock\/1\/Medium",
+          "layout": "Digital · 12 hour",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/clock\/1\/Large",
+          "layout": "Digital · 12 hour",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/clock\/2\/Small",
+          "layout": "Digital · 24 hour",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/clock\/2\/Medium",
+          "layout": "Digital · 24 hour",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/clock\/2\/Large",
+          "layout": "Digital · 24 hour",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/clock\/3\/Small",
+          "layout": "Stacked digits",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/clock\/3\/Medium",
+          "layout": "Stacked digits",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/clock\/3\/Large",
+          "layout": "Stacked digits",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "World clock",
+      "source": "Android \/ Nook data",
+      "detail": "Keep your cities a little closer.",
+      "layouts": [
+        {
+          "id": "Pixel\/worldclock\/0\/Medium",
+          "layout": "Three cities",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/worldclock\/0\/Large",
+          "layout": "Three cities",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/worldclock\/1\/Small",
+          "layout": "One city",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/worldclock\/1\/Medium",
+          "layout": "One city",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/worldclock\/1\/Large",
+          "layout": "One city",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Weather",
+      "source": "Connected city · Open-Meteo",
+      "detail": "Open-Meteo conditions and forecast for the city you choose; no device-location access.",
+      "layouts": [
+        {
+          "id": "Pixel\/weather\/0\/Small",
+          "layout": "Current conditions",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/weather\/0\/Medium",
+          "layout": "Current conditions",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/weather\/0\/Large",
+          "layout": "Current conditions",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/weather\/1\/Medium",
+          "layout": "Three-day forecast",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/weather\/1\/Large",
+          "layout": "Three-day forecast",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Photos",
+      "source": "Chosen image",
+      "detail": "A favorite photo, framed your way.",
+      "layouts": [
+        {
+          "id": "Pixel\/photos\/0\/Small",
+          "layout": "Fill frame",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/photos\/0\/Medium",
+          "layout": "Fill frame",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/photos\/0\/Large",
+          "layout": "Fill frame",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/photos\/1\/Small",
+          "layout": "Fit whole photo",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/photos\/1\/Medium",
+          "layout": "Fit whole photo",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/photos\/1\/Large",
+          "layout": "Fit whole photo",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Music",
+      "source": "Active Android player",
+      "detail": "Your active player's artwork and controls.",
+      "layouts": [
+        {
+          "id": "Pixel\/music\/0\/Small",
+          "layout": "Artwork and controls",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/music\/0\/Medium",
+          "layout": "Artwork and controls",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/music\/0\/Large",
+          "layout": "Artwork and controls",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/music\/1\/Small",
+          "layout": "Simple player",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/music\/1\/Medium",
+          "layout": "Simple player",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/music\/1\/Large",
+          "layout": "Simple player",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Batteries",
+      "source": "Android \/ Nook data",
+      "detail": "Your phone's charge, at a glance.",
+      "layouts": [
+        {
+          "id": "Pixel\/battery\/0\/Small",
+          "layout": "Battery ring",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/battery\/0\/Medium",
+          "layout": "Battery ring",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/battery\/0\/Large",
+          "layout": "Battery ring",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/battery\/1\/Small",
+          "layout": "Large percentage",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/battery\/1\/Medium",
+          "layout": "Large percentage",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/battery\/1\/Large",
+          "layout": "Large percentage",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Calendar",
+      "source": "Android \/ Nook data",
+      "detail": "A month of possibilities. Or just this week.",
+      "layouts": [
+        {
+          "id": "Pixel\/calendar\/0\/Medium",
+          "layout": "Month",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/calendar\/0\/Large",
+          "layout": "Month",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/calendar\/1\/Small",
+          "layout": "Week",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/calendar\/1\/Medium",
+          "layout": "Week",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/calendar\/1\/Large",
+          "layout": "Week",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Up next",
+      "source": "Android \/ Nook data",
+      "detail": "Your real calendar events, close at hand.",
+      "layouts": [
+        {
+          "id": "Pixel\/agenda\/0\/Small",
+          "layout": "Next 7 days",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/agenda\/0\/Medium",
+          "layout": "Next 7 days",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/agenda\/0\/Large",
+          "layout": "Next 7 days",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/agenda\/1\/Small",
+          "layout": "Next 30 days",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/agenda\/1\/Medium",
+          "layout": "Next 30 days",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/agenda\/1\/Large",
+          "layout": "Next 30 days",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Notes",
+      "source": "Android \/ Nook data",
+      "detail": "Catch a thought before it goes.",
+      "layouts": [
+        {
+          "id": "Pixel\/notes\/0\/Small",
+          "layout": "One note",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/notes\/0\/Medium",
+          "layout": "One note",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/notes\/0\/Large",
+          "layout": "One note",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/notes\/1\/Small",
+          "layout": "Notes list",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/notes\/1\/Medium",
+          "layout": "Notes list",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/notes\/1\/Large",
+          "layout": "Notes list",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Reminders",
+      "source": "Android \/ Nook data",
+      "detail": "A little nudge, right on time.",
+      "layouts": [
+        {
+          "id": "Pixel\/reminders\/0\/Small",
+          "layout": "All upcoming",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/reminders\/0\/Medium",
+          "layout": "All upcoming",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/reminders\/0\/Large",
+          "layout": "All upcoming",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/reminders\/1\/Small",
+          "layout": "Due today and overdue",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/reminders\/1\/Medium",
+          "layout": "Due today and overdue",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/reminders\/1\/Large",
+          "layout": "Due today and overdue",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Countdown",
+      "source": "Android \/ Nook data",
+      "detail": "Count the days to something good.",
+      "layouts": [
+        {
+          "id": "Pixel\/countdown\/0\/Small",
+          "layout": "Days until the date",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/countdown\/0\/Medium",
+          "layout": "Days until the date",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/countdown\/0\/Large",
+          "layout": "Days until the date",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/countdown\/1\/Small",
+          "layout": "Count days after the date too",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/countdown\/1\/Medium",
+          "layout": "Count days after the date too",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/countdown\/1\/Large",
+          "layout": "Count days after the date too",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Contacts",
+      "source": "Android \/ Nook data",
+      "detail": "Your people, one tap from the dialer.",
+      "layouts": [
+        {
+          "id": "Pixel\/contacts\/0\/Small",
+          "layout": "Three favorites",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/contacts\/0\/Medium",
+          "layout": "Three favorites",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/contacts\/0\/Large",
+          "layout": "Three favorites",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/contacts\/1\/Small",
+          "layout": "One favorite",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/contacts\/1\/Medium",
+          "layout": "One favorite",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/contacts\/1\/Large",
+          "layout": "One favorite",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Digital Wellbeing",
+      "source": "Optional Android usage access",
+      "detail": "Today's Android-reported app time and most-used apps.",
+      "layouts": [
+        {
+          "id": "Pixel\/screen\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/screen\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/screen\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/screen\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/screen\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/screen\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "App shortcuts",
+      "source": "Android \/ Nook data",
+      "detail": "Launch your chosen installed apps.",
+      "layouts": [
+        {
+          "id": "Pixel\/shortcuts\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/shortcuts\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/shortcuts\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/shortcuts\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/shortcuts\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/shortcuts\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Maps · destinations",
+      "source": "External provider shortcut",
+      "detail": "Open directions to your saved destinations.",
+      "layouts": [
+        {
+          "id": "Pixel\/maps\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/maps\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/maps\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/maps\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/maps\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/maps\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Drive · chosen files",
+      "source": "Chosen documents",
+      "detail": "Three files you choose through Android's document picker.",
+      "layouts": [
+        {
+          "id": "Pixel\/files\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/files\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/files\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/files\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/files\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/files\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Chrome · bookmarks",
+      "source": "Android \/ Nook data",
+      "detail": "Your saved web pages, one tap away.",
+      "layouts": [
+        {
+          "id": "Pixel\/bookmarks\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/bookmarks\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/bookmarks\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/bookmarks\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/bookmarks\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/bookmarks\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Search",
+      "source": "Android \/ Nook data",
+      "detail": "A small doorway to the web.",
+      "layouts": [
+        {
+          "id": "Pixel\/search\/0\/Small",
+          "layout": "Google",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/search\/0\/Medium",
+          "layout": "Google",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/search\/0\/Large",
+          "layout": "Google",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/search\/1\/Small",
+          "layout": "DuckDuckGo",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/search\/1\/Medium",
+          "layout": "DuckDuckGo",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/search\/1\/Large",
+          "layout": "DuckDuckGo",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/search\/2\/Small",
+          "layout": "Bing",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/search\/2\/Medium",
+          "layout": "Bing",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/search\/2\/Large",
+          "layout": "Bing",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Settings shortcuts",
+      "source": "Android \/ Nook data",
+      "detail": "Useful phone settings and app shortcuts.",
+      "layouts": [
+        {
+          "id": "Pixel\/controls\/0\/Small",
+          "layout": "Connections",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/controls\/0\/Medium",
+          "layout": "Connections",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/controls\/0\/Large",
+          "layout": "Connections",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/controls\/1\/Small",
+          "layout": "Everyday apps",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/controls\/1\/Medium",
+          "layout": "Everyday apps",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/controls\/1\/Large",
+          "layout": "Everyday apps",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Voice Recorder",
+      "source": "Android \/ Nook data",
+      "detail": "Record and play private voice memos while the recorder is open.",
+      "layouts": [
+        {
+          "id": "Pixel\/recorder\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/recorder\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/recorder\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/recorder\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/recorder\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/recorder\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Tasks",
+      "source": "Android \/ Nook data",
+      "detail": "Less to remember. More to do.",
+      "layouts": [
+        {
+          "id": "Pixel\/tasks\/0\/Small",
+          "layout": "Unfinished tasks",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/tasks\/0\/Medium",
+          "layout": "Unfinished tasks",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/tasks\/0\/Large",
+          "layout": "Unfinished tasks",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/tasks\/1\/Small",
+          "layout": "All tasks",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/tasks\/1\/Medium",
+          "layout": "All tasks",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/tasks\/1\/Large",
+          "layout": "All tasks",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "News · your feed",
+      "source": "Connected RSS source",
+      "detail": "Read your chosen source; no vendor news account.",
+      "layouts": [
+        {
+          "id": "Pixel\/news\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/news\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/news\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/news\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/news\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/news\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Translate",
+      "source": "External provider shortcut",
+      "detail": "Type text and choose to open Google Translate.",
+      "layouts": [
+        {
+          "id": "Pixel\/translate\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/translate\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/translate\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/translate\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/translate\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/translate\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Keep · checklist",
+      "source": "Android \/ Nook data",
+      "detail": "Less to remember. More to do.",
+      "layouts": [
+        {
+          "id": "Pixel\/keep\/0\/Small",
+          "layout": "Unfinished tasks",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/keep\/0\/Medium",
+          "layout": "Unfinished tasks",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/keep\/0\/Large",
+          "layout": "Unfinished tasks",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/keep\/1\/Small",
+          "layout": "All tasks",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/keep\/1\/Medium",
+          "layout": "All tasks",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/keep\/1\/Large",
+          "layout": "All tasks",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "YouTube Music · active player",
+      "source": "Active Android player",
+      "detail": "Your active player's artwork and controls.",
+      "layouts": [
+        {
+          "id": "Pixel\/youtube\/0\/Small",
+          "layout": "Artwork and controls",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/youtube\/0\/Medium",
+          "layout": "Artwork and controls",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/youtube\/0\/Large",
+          "layout": "Artwork and controls",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/youtube\/1\/Small",
+          "layout": "Simple player",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/youtube\/1\/Medium",
+          "layout": "Simple player",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/youtube\/1\/Large",
+          "layout": "Simple player",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Google Home",
+      "source": "Manual \/ app shortcut",
+      "detail": "Manual card or installed-app shortcut; Google Home devices and actions are not connected.",
+      "layouts": [
+        {
+          "id": "Pixel\/home\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/home\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/home\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/home\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/home\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/home\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Gmail",
+      "source": "Manual \/ app shortcut",
+      "detail": "Shortcut to your installed mail app; Gmail inbox data is not connected.",
+      "layouts": [
+        {
+          "id": "Pixel\/gmail\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/gmail\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/gmail\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/gmail\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/gmail\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/gmail\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Gemini",
+      "source": "Manual \/ app shortcut",
+      "detail": "Shortcut to your chosen assistant app; no assistant account or conversation data is read.",
+      "layouts": [
+        {
+          "id": "Pixel\/gemini\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/gemini\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/gemini\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Pixel\/gemini\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/gemini\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/gemini\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "At a Glance",
+      "source": "Android \/ connected city",
+      "detail": "Native time, optional visible-calendar event and your selected city's weather.",
+      "layouts": [
+        {
+          "id": "Pixel\/quicklook\/0\/Small",
+          "layout": "Time, event and weather",
+          "size": "Small"
+        },
+        {
+          "id": "Pixel\/quicklook\/0\/Medium",
+          "layout": "Time, event and weather",
+          "size": "Medium"
+        },
+        {
+          "id": "Pixel\/quicklook\/0\/Large",
+          "layout": "Time, event and weather",
+          "size": "Large"
+        }
+      ]
+    }
+  ],
+  "Samsung": [
+    {
+      "family": "Clock",
+      "source": "Android \/ Nook data",
+      "detail": "Give your day a little space.",
+      "layouts": [
+        {
+          "id": "Samsung\/clock\/0\/Small",
+          "layout": "Analog face",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/clock\/0\/Medium",
+          "layout": "Analog face",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/clock\/0\/Large",
+          "layout": "Analog face",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/clock\/1\/Small",
+          "layout": "Digital · 12 hour",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/clock\/1\/Medium",
+          "layout": "Digital · 12 hour",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/clock\/1\/Large",
+          "layout": "Digital · 12 hour",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/clock\/2\/Small",
+          "layout": "Digital · 24 hour",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/clock\/2\/Medium",
+          "layout": "Digital · 24 hour",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/clock\/2\/Large",
+          "layout": "Digital · 24 hour",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/clock\/3\/Small",
+          "layout": "Stacked digits",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/clock\/3\/Medium",
+          "layout": "Stacked digits",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/clock\/3\/Large",
+          "layout": "Stacked digits",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "World clock",
+      "source": "Android \/ Nook data",
+      "detail": "Keep your cities a little closer.",
+      "layouts": [
+        {
+          "id": "Samsung\/worldclock\/0\/Medium",
+          "layout": "Three cities",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/worldclock\/0\/Large",
+          "layout": "Three cities",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/worldclock\/1\/Small",
+          "layout": "One city",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/worldclock\/1\/Medium",
+          "layout": "One city",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/worldclock\/1\/Large",
+          "layout": "One city",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Weather",
+      "source": "Connected city · Open-Meteo",
+      "detail": "Open-Meteo conditions and forecast for the city you choose; no device-location access.",
+      "layouts": [
+        {
+          "id": "Samsung\/weather\/0\/Small",
+          "layout": "Current conditions",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/weather\/0\/Medium",
+          "layout": "Current conditions",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/weather\/0\/Large",
+          "layout": "Current conditions",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/weather\/1\/Medium",
+          "layout": "Three-day forecast",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/weather\/1\/Large",
+          "layout": "Three-day forecast",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Photos",
+      "source": "Chosen image",
+      "detail": "A favorite photo, framed your way.",
+      "layouts": [
+        {
+          "id": "Samsung\/photos\/0\/Small",
+          "layout": "Fill frame",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/photos\/0\/Medium",
+          "layout": "Fill frame",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/photos\/0\/Large",
+          "layout": "Fill frame",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/photos\/1\/Small",
+          "layout": "Fit whole photo",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/photos\/1\/Medium",
+          "layout": "Fit whole photo",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/photos\/1\/Large",
+          "layout": "Fit whole photo",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Music",
+      "source": "Active Android player",
+      "detail": "Your active player's artwork and controls.",
+      "layouts": [
+        {
+          "id": "Samsung\/music\/0\/Small",
+          "layout": "Artwork and controls",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/music\/0\/Medium",
+          "layout": "Artwork and controls",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/music\/0\/Large",
+          "layout": "Artwork and controls",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/music\/1\/Small",
+          "layout": "Simple player",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/music\/1\/Medium",
+          "layout": "Simple player",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/music\/1\/Large",
+          "layout": "Simple player",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Batteries",
+      "source": "Android \/ Nook data",
+      "detail": "Your phone's charge, at a glance.",
+      "layouts": [
+        {
+          "id": "Samsung\/battery\/0\/Small",
+          "layout": "Battery ring",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/battery\/0\/Medium",
+          "layout": "Battery ring",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/battery\/0\/Large",
+          "layout": "Battery ring",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/battery\/1\/Small",
+          "layout": "Large percentage",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/battery\/1\/Medium",
+          "layout": "Large percentage",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/battery\/1\/Large",
+          "layout": "Large percentage",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Calendar",
+      "source": "Android \/ Nook data",
+      "detail": "A month of possibilities. Or just this week.",
+      "layouts": [
+        {
+          "id": "Samsung\/calendar\/0\/Medium",
+          "layout": "Month",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/calendar\/0\/Large",
+          "layout": "Month",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/calendar\/1\/Small",
+          "layout": "Week",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/calendar\/1\/Medium",
+          "layout": "Week",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/calendar\/1\/Large",
+          "layout": "Week",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Up next",
+      "source": "Android \/ Nook data",
+      "detail": "Your real calendar events, close at hand.",
+      "layouts": [
+        {
+          "id": "Samsung\/agenda\/0\/Small",
+          "layout": "Next 7 days",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/agenda\/0\/Medium",
+          "layout": "Next 7 days",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/agenda\/0\/Large",
+          "layout": "Next 7 days",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/agenda\/1\/Small",
+          "layout": "Next 30 days",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/agenda\/1\/Medium",
+          "layout": "Next 30 days",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/agenda\/1\/Large",
+          "layout": "Next 30 days",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Notes",
+      "source": "Android \/ Nook data",
+      "detail": "Catch a thought before it goes.",
+      "layouts": [
+        {
+          "id": "Samsung\/notes\/0\/Small",
+          "layout": "One note",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/notes\/0\/Medium",
+          "layout": "One note",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/notes\/0\/Large",
+          "layout": "One note",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/notes\/1\/Small",
+          "layout": "Notes list",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/notes\/1\/Medium",
+          "layout": "Notes list",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/notes\/1\/Large",
+          "layout": "Notes list",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Reminders",
+      "source": "Android \/ Nook data",
+      "detail": "A little nudge, right on time.",
+      "layouts": [
+        {
+          "id": "Samsung\/reminders\/0\/Small",
+          "layout": "All upcoming",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/reminders\/0\/Medium",
+          "layout": "All upcoming",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/reminders\/0\/Large",
+          "layout": "All upcoming",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/reminders\/1\/Small",
+          "layout": "Due today and overdue",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/reminders\/1\/Medium",
+          "layout": "Due today and overdue",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/reminders\/1\/Large",
+          "layout": "Due today and overdue",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Countdown",
+      "source": "Android \/ Nook data",
+      "detail": "Count the days to something good.",
+      "layouts": [
+        {
+          "id": "Samsung\/countdown\/0\/Small",
+          "layout": "Days until the date",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/countdown\/0\/Medium",
+          "layout": "Days until the date",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/countdown\/0\/Large",
+          "layout": "Days until the date",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/countdown\/1\/Small",
+          "layout": "Count days after the date too",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/countdown\/1\/Medium",
+          "layout": "Count days after the date too",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/countdown\/1\/Large",
+          "layout": "Count days after the date too",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Contacts",
+      "source": "Android \/ Nook data",
+      "detail": "Your people, one tap from the dialer.",
+      "layouts": [
+        {
+          "id": "Samsung\/contacts\/0\/Small",
+          "layout": "Three favorites",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/contacts\/0\/Medium",
+          "layout": "Three favorites",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/contacts\/0\/Large",
+          "layout": "Three favorites",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/contacts\/1\/Small",
+          "layout": "One favorite",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/contacts\/1\/Medium",
+          "layout": "One favorite",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/contacts\/1\/Large",
+          "layout": "One favorite",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Digital Wellbeing",
+      "source": "Optional Android usage access",
+      "detail": "Today's Android-reported app time and most-used apps.",
+      "layouts": [
+        {
+          "id": "Samsung\/screen\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/screen\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/screen\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/screen\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/screen\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/screen\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "App shortcuts",
+      "source": "Android \/ Nook data",
+      "detail": "Launch your chosen installed apps.",
+      "layouts": [
+        {
+          "id": "Samsung\/shortcuts\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/shortcuts\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/shortcuts\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/shortcuts\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/shortcuts\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/shortcuts\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Maps · destinations",
+      "source": "External provider shortcut",
+      "detail": "Open directions to your saved destinations.",
+      "layouts": [
+        {
+          "id": "Samsung\/maps\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/maps\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/maps\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/maps\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/maps\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/maps\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "My Files · chosen files",
+      "source": "Chosen documents",
+      "detail": "Three files you choose through Android's document picker.",
+      "layouts": [
+        {
+          "id": "Samsung\/files\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/files\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/files\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/files\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/files\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/files\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Internet · bookmarks",
+      "source": "Android \/ Nook data",
+      "detail": "Your saved web pages, one tap away.",
+      "layouts": [
+        {
+          "id": "Samsung\/bookmarks\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/bookmarks\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/bookmarks\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/bookmarks\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/bookmarks\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/bookmarks\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Search",
+      "source": "Android \/ Nook data",
+      "detail": "A small doorway to the web.",
+      "layouts": [
+        {
+          "id": "Samsung\/search\/0\/Small",
+          "layout": "Google",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/search\/0\/Medium",
+          "layout": "Google",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/search\/0\/Large",
+          "layout": "Google",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/search\/1\/Small",
+          "layout": "DuckDuckGo",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/search\/1\/Medium",
+          "layout": "DuckDuckGo",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/search\/1\/Large",
+          "layout": "DuckDuckGo",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/search\/2\/Small",
+          "layout": "Bing",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/search\/2\/Medium",
+          "layout": "Bing",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/search\/2\/Large",
+          "layout": "Bing",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Settings shortcuts",
+      "source": "Android \/ Nook data",
+      "detail": "Useful phone settings and app shortcuts.",
+      "layouts": [
+        {
+          "id": "Samsung\/controls\/0\/Small",
+          "layout": "Connections",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/controls\/0\/Medium",
+          "layout": "Connections",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/controls\/0\/Large",
+          "layout": "Connections",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/controls\/1\/Small",
+          "layout": "Everyday apps",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/controls\/1\/Medium",
+          "layout": "Everyday apps",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/controls\/1\/Large",
+          "layout": "Everyday apps",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Voice Recorder",
+      "source": "Android \/ Nook data",
+      "detail": "Record and play private voice memos while the recorder is open.",
+      "layouts": [
+        {
+          "id": "Samsung\/recorder\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/recorder\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/recorder\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/recorder\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/recorder\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/recorder\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Tasks",
+      "source": "Android \/ Nook data",
+      "detail": "Less to remember. More to do.",
+      "layouts": [
+        {
+          "id": "Samsung\/tasks\/0\/Small",
+          "layout": "Unfinished tasks",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/tasks\/0\/Medium",
+          "layout": "Unfinished tasks",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/tasks\/0\/Large",
+          "layout": "Unfinished tasks",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/tasks\/1\/Small",
+          "layout": "All tasks",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/tasks\/1\/Medium",
+          "layout": "All tasks",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/tasks\/1\/Large",
+          "layout": "All tasks",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "News · your feed",
+      "source": "Connected RSS source",
+      "detail": "Read your chosen source; no vendor news account.",
+      "layouts": [
+        {
+          "id": "Samsung\/news\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/news\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/news\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/news\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/news\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/news\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Device care",
+      "source": "Android \/ Nook data",
+      "detail": "Real storage and available memory, refreshed on tap.",
+      "layouts": [
+        {
+          "id": "Samsung\/devicecare\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/devicecare\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/devicecare\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/devicecare\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/devicecare\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/devicecare\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Samsung Health · activity log",
+      "source": "Manual log",
+      "detail": "Your own entries; no private health account or automatic sensor history is supplied.",
+      "layouts": [
+        {
+          "id": "Samsung\/activity\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/activity\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/activity\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/activity\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/activity\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/activity\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Samsung Health · steps log",
+      "source": "Manual log",
+      "detail": "Your own entries; no private health account or automatic sensor history is supplied.",
+      "layouts": [
+        {
+          "id": "Samsung\/steps\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/steps\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/steps\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/steps\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/steps\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/steps\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Samsung Health · sleep log",
+      "source": "Manual log",
+      "detail": "Your own entries; no private health account or automatic sensor history is supplied.",
+      "layouts": [
+        {
+          "id": "Samsung\/sleep\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/sleep\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/sleep\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/sleep\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/sleep\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/sleep\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Samsung Health · water log",
+      "source": "Manual log",
+      "detail": "Your own entries; no private health account or automatic sensor history is supplied.",
+      "layouts": [
+        {
+          "id": "Samsung\/water\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/water\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/water\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/water\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/water\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/water\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Samsung Health · check-ins",
+      "source": "Manual log",
+      "detail": "Your own entries; no private health account or automatic sensor history is supplied.",
+      "layouts": [
+        {
+          "id": "Samsung\/medications\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/medications\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/medications\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/medications\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/medications\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/medications\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "SmartThings",
+      "source": "Manual \/ app shortcut",
+      "detail": "Manual card or installed-app shortcut. Samsung cloud devices and scenes are not connected.",
+      "layouts": [
+        {
+          "id": "Samsung\/smartthings\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/smartthings\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/smartthings\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/smartthings\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/smartthings\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/smartthings\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Modes and Routines",
+      "source": "Manual \/ app shortcut",
+      "detail": "Shortcut to your chosen automation app. Nook does not claim to execute Samsung's private routines.",
+      "layouts": [
+        {
+          "id": "Samsung\/modes\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/modes\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/modes\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/modes\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/modes\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/modes\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Galaxy Buds",
+      "source": "Manual \/ app shortcut",
+      "detail": "Shortcut to your wearable app. Private accessory battery readings and device controls are not supplied.",
+      "layouts": [
+        {
+          "id": "Samsung\/buds\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/buds\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/buds\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/buds\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/buds\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/buds\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Samsung Email",
+      "source": "Manual \/ app shortcut",
+      "detail": "Shortcut to your installed email app; private inbox data is not connected.",
+      "layouts": [
+        {
+          "id": "Samsung\/email\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/email\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/email\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/email\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/email\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/email\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Smart suggestions",
+      "source": "Manual \/ app shortcut",
+      "detail": "Your chosen app shortcuts; no proprietary recommendation engine.",
+      "layouts": [
+        {
+          "id": "Samsung\/suggestions\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/suggestions\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/suggestions\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Samsung\/suggestions\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Samsung\/suggestions\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Samsung\/suggestions\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    }
+  ],
+  "Nothing": [
+    {
+      "family": "Clock",
+      "source": "Android \/ Nook data",
+      "detail": "Give your day a little space.",
+      "layouts": [
+        {
+          "id": "Nothing\/clock\/0\/Small",
+          "layout": "Analog face",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/clock\/0\/Medium",
+          "layout": "Analog face",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/clock\/0\/Large",
+          "layout": "Analog face",
+          "size": "Large"
+        },
+        {
+          "id": "Nothing\/clock\/1\/Small",
+          "layout": "Digital · 12 hour",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/clock\/1\/Medium",
+          "layout": "Digital · 12 hour",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/clock\/1\/Large",
+          "layout": "Digital · 12 hour",
+          "size": "Large"
+        },
+        {
+          "id": "Nothing\/clock\/2\/Small",
+          "layout": "Digital · 24 hour",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/clock\/2\/Medium",
+          "layout": "Digital · 24 hour",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/clock\/2\/Large",
+          "layout": "Digital · 24 hour",
+          "size": "Large"
+        },
+        {
+          "id": "Nothing\/clock\/3\/Small",
+          "layout": "Stacked digits",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/clock\/3\/Medium",
+          "layout": "Stacked digits",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/clock\/3\/Large",
+          "layout": "Stacked digits",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "World clock",
+      "source": "Android \/ Nook data",
+      "detail": "Keep your cities a little closer.",
+      "layouts": [
+        {
+          "id": "Nothing\/worldclock\/0\/Medium",
+          "layout": "Three cities",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/worldclock\/0\/Large",
+          "layout": "Three cities",
+          "size": "Large"
+        },
+        {
+          "id": "Nothing\/worldclock\/1\/Small",
+          "layout": "One city",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/worldclock\/1\/Medium",
+          "layout": "One city",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/worldclock\/1\/Large",
+          "layout": "One city",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Weather",
+      "source": "Connected city · Open-Meteo",
+      "detail": "Open-Meteo conditions and forecast for the city you choose; no device-location access.",
+      "layouts": [
+        {
+          "id": "Nothing\/weather\/0\/Small",
+          "layout": "Current conditions",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/weather\/0\/Medium",
+          "layout": "Current conditions",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/weather\/0\/Large",
+          "layout": "Current conditions",
+          "size": "Large"
+        },
+        {
+          "id": "Nothing\/weather\/1\/Medium",
+          "layout": "Three-day forecast",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/weather\/1\/Large",
+          "layout": "Three-day forecast",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Photos",
+      "source": "Chosen image",
+      "detail": "A favorite photo, framed your way.",
+      "layouts": [
+        {
+          "id": "Nothing\/photos\/0\/Small",
+          "layout": "Fill frame",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/photos\/0\/Medium",
+          "layout": "Fill frame",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/photos\/0\/Large",
+          "layout": "Fill frame",
+          "size": "Large"
+        },
+        {
+          "id": "Nothing\/photos\/1\/Small",
+          "layout": "Fit whole photo",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/photos\/1\/Medium",
+          "layout": "Fit whole photo",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/photos\/1\/Large",
+          "layout": "Fit whole photo",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Music",
+      "source": "Active Android player",
+      "detail": "Your active player's artwork and controls.",
+      "layouts": [
+        {
+          "id": "Nothing\/music\/0\/Small",
+          "layout": "Artwork and controls",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/music\/0\/Medium",
+          "layout": "Artwork and controls",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/music\/0\/Large",
+          "layout": "Artwork and controls",
+          "size": "Large"
+        },
+        {
+          "id": "Nothing\/music\/1\/Small",
+          "layout": "Simple player",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/music\/1\/Medium",
+          "layout": "Simple player",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/music\/1\/Large",
+          "layout": "Simple player",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Batteries",
+      "source": "Android \/ Nook data",
+      "detail": "Your phone's charge, at a glance.",
+      "layouts": [
+        {
+          "id": "Nothing\/battery\/0\/Small",
+          "layout": "Battery ring",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/battery\/0\/Medium",
+          "layout": "Battery ring",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/battery\/0\/Large",
+          "layout": "Battery ring",
+          "size": "Large"
+        },
+        {
+          "id": "Nothing\/battery\/1\/Small",
+          "layout": "Large percentage",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/battery\/1\/Medium",
+          "layout": "Large percentage",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/battery\/1\/Large",
+          "layout": "Large percentage",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Calendar",
+      "source": "Android \/ Nook data",
+      "detail": "A month of possibilities. Or just this week.",
+      "layouts": [
+        {
+          "id": "Nothing\/calendar\/0\/Medium",
+          "layout": "Month",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/calendar\/0\/Large",
+          "layout": "Month",
+          "size": "Large"
+        },
+        {
+          "id": "Nothing\/calendar\/1\/Small",
+          "layout": "Week",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/calendar\/1\/Medium",
+          "layout": "Week",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/calendar\/1\/Large",
+          "layout": "Week",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Up next",
+      "source": "Android \/ Nook data",
+      "detail": "Your real calendar events, close at hand.",
+      "layouts": [
+        {
+          "id": "Nothing\/agenda\/0\/Small",
+          "layout": "Next 7 days",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/agenda\/0\/Medium",
+          "layout": "Next 7 days",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/agenda\/0\/Large",
+          "layout": "Next 7 days",
+          "size": "Large"
+        },
+        {
+          "id": "Nothing\/agenda\/1\/Small",
+          "layout": "Next 30 days",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/agenda\/1\/Medium",
+          "layout": "Next 30 days",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/agenda\/1\/Large",
+          "layout": "Next 30 days",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Notes",
+      "source": "Android \/ Nook data",
+      "detail": "Catch a thought before it goes.",
+      "layouts": [
+        {
+          "id": "Nothing\/notes\/0\/Small",
+          "layout": "One note",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/notes\/0\/Medium",
+          "layout": "One note",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/notes\/0\/Large",
+          "layout": "One note",
+          "size": "Large"
+        },
+        {
+          "id": "Nothing\/notes\/1\/Small",
+          "layout": "Notes list",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/notes\/1\/Medium",
+          "layout": "Notes list",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/notes\/1\/Large",
+          "layout": "Notes list",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Reminders",
+      "source": "Android \/ Nook data",
+      "detail": "A little nudge, right on time.",
+      "layouts": [
+        {
+          "id": "Nothing\/reminders\/0\/Small",
+          "layout": "All upcoming",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/reminders\/0\/Medium",
+          "layout": "All upcoming",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/reminders\/0\/Large",
+          "layout": "All upcoming",
+          "size": "Large"
+        },
+        {
+          "id": "Nothing\/reminders\/1\/Small",
+          "layout": "Due today and overdue",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/reminders\/1\/Medium",
+          "layout": "Due today and overdue",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/reminders\/1\/Large",
+          "layout": "Due today and overdue",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Countdown",
+      "source": "Android \/ Nook data",
+      "detail": "Count the days to something good.",
+      "layouts": [
+        {
+          "id": "Nothing\/countdown\/0\/Small",
+          "layout": "Days until the date",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/countdown\/0\/Medium",
+          "layout": "Days until the date",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/countdown\/0\/Large",
+          "layout": "Days until the date",
+          "size": "Large"
+        },
+        {
+          "id": "Nothing\/countdown\/1\/Small",
+          "layout": "Count days after the date too",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/countdown\/1\/Medium",
+          "layout": "Count days after the date too",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/countdown\/1\/Large",
+          "layout": "Count days after the date too",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Compass",
+      "source": "Android \/ Nook data",
+      "detail": "Measure a live magnetic heading; keep the last reading in view.",
+      "layouts": [
+        {
+          "id": "Nothing\/compass\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/compass\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/compass\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Nothing\/compass\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/compass\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/compass\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Recorder",
+      "source": "Android \/ Nook data",
+      "detail": "Record and play private voice memos while the recorder is open.",
+      "layouts": [
+        {
+          "id": "Nothing\/recorder\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/recorder\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/recorder\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Nothing\/recorder\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/recorder\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/recorder\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Screen time",
+      "source": "Optional Android usage access",
+      "detail": "Today's Android-reported app time and most-used apps.",
+      "layouts": [
+        {
+          "id": "Nothing\/screen\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/screen\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/screen\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Nothing\/screen\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/screen\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/screen\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Quick settings",
+      "source": "Android \/ Nook data",
+      "detail": "Useful phone settings and app shortcuts.",
+      "layouts": [
+        {
+          "id": "Nothing\/controls\/0\/Small",
+          "layout": "Connections",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/controls\/0\/Medium",
+          "layout": "Connections",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/controls\/0\/Large",
+          "layout": "Connections",
+          "size": "Large"
+        },
+        {
+          "id": "Nothing\/controls\/1\/Small",
+          "layout": "Everyday apps",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/controls\/1\/Medium",
+          "layout": "Everyday apps",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/controls\/1\/Large",
+          "layout": "Everyday apps",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Stopwatch",
+      "source": "Android \/ Nook data",
+      "detail": "A live stopwatch with pause, resume and laps.",
+      "layouts": [
+        {
+          "id": "Nothing\/stopwatch\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/stopwatch\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/stopwatch\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Nothing\/stopwatch\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/stopwatch\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/stopwatch\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Breathing",
+      "source": "Android \/ Nook data",
+      "detail": "A guided breathing session with your chosen rhythm.",
+      "layouts": [
+        {
+          "id": "Nothing\/breathing\/0\/Small",
+          "layout": "Box rhythm",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/breathing\/0\/Medium",
+          "layout": "Box rhythm",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/breathing\/0\/Large",
+          "layout": "Box rhythm",
+          "size": "Large"
+        },
+        {
+          "id": "Nothing\/breathing\/1\/Small",
+          "layout": "4–7–8 rhythm",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/breathing\/1\/Medium",
+          "layout": "4–7–8 rhythm",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/breathing\/1\/Large",
+          "layout": "4–7–8 rhythm",
+          "size": "Large"
+        },
+        {
+          "id": "Nothing\/breathing\/2\/Small",
+          "layout": "Steady rhythm",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/breathing\/2\/Medium",
+          "layout": "Steady rhythm",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/breathing\/2\/Large",
+          "layout": "Steady rhythm",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Pedometer · manual log",
+      "source": "Manual log",
+      "detail": "Your own entries; no private health account or automatic sensor history is supplied.",
+      "layouts": [
+        {
+          "id": "Nothing\/steps\/0\/Small",
+          "layout": "Detailed",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/steps\/0\/Medium",
+          "layout": "Detailed",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/steps\/0\/Large",
+          "layout": "Detailed",
+          "size": "Large"
+        },
+        {
+          "id": "Nothing\/steps\/1\/Small",
+          "layout": "Summary",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/steps\/1\/Medium",
+          "layout": "Summary",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/steps\/1\/Large",
+          "layout": "Summary",
+          "size": "Large"
+        }
+      ]
+    },
+    {
+      "family": "Quick Look",
+      "source": "Android \/ connected city",
+      "detail": "Native time, optional visible-calendar event and your selected city's weather.",
+      "layouts": [
+        {
+          "id": "Nothing\/quicklook\/0\/Small",
+          "layout": "Time, event and weather",
+          "size": "Small"
+        },
+        {
+          "id": "Nothing\/quicklook\/0\/Medium",
+          "layout": "Time, event and weather",
+          "size": "Medium"
+        },
+        {
+          "id": "Nothing\/quicklook\/0\/Large",
+          "layout": "Time, event and weather",
+          "size": "Large"
+        }
+      ]
+    }
+  ]
+}

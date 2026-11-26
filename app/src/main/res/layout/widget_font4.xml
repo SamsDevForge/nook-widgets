@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent">
+<ImageView android:id="@+id/widget_surface" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" android:src="@drawable/moss_surface" android:importantForAccessibility="no" android:contentDescription="@null"/>
+<LinearLayout android:id="@+id/widget_root" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:padding="18dp">
+  <LinearLayout android:id="@+id/widget_header" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center_vertical">
+    <ImageView android:id="@+id/widget_icon" android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_notes" android:contentDescription="@null"/>
+    <TextView android:id="@+id/widget_label" android:layout_width="0dp" android:layout_weight="1" android:layout_height="40dp" android:gravity="center_vertical" android:paddingStart="9dp" android:paddingEnd="4dp" android:text="QUICK NOTE" android:textColor="#E9F0E4" android:textSize="11sp" android:fontFamily="@font/nook_dots" android:letterSpacing="0.12"/>
+    <TextView android:id="@+id/widget_settings" android:layout_width="40dp" android:layout_height="40dp" android:text="···" android:gravity="center" android:textSize="24sp" android:textColor="#E9F0E4" android:contentDescription="Customize widget" android:fontFamily="sans-serif"/>
+  </LinearLayout>
+  <TextView android:id="@+id/widget_title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="A little space for your thoughts." android:textColor="#E9F0E4" android:textSize="22sp" android:fontFamily="@font/nook_dots" android:maxLines="2" android:ellipsize="end" android:layout_marginTop="4dp"/>
+  <TextView android:id="@+id/widget_meta" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="6dp" android:textSize="11sp" android:textColor="#AEBFAE" android:maxLines="1" android:ellipsize="end" android:visibility="gone" android:fontFamily="monospace"/>
+  <TextClock android:id="@+id/widget_time" android:layout_width="match_parent" android:layout_height="wrap_content" android:format12Hour="h:mm" android:format24Hour="HH:mm" android:textSize="52sp" android:textColor="#E9F0E4" android:fontFamily="@font/nook_dots" android:visibility="gone"/>
+  <TextClock android:id="@+id/widget_date" android:layout_width="match_parent" android:layout_height="wrap_content" android:format12Hour="EEEE, d MMM" android:format24Hour="EEEE, d MMM" android:textSize="14sp" android:textColor="#AEBFAE" android:visibility="gone" android:fontFamily="monospace"/>
+  <TextView android:id="@+id/widget_body" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Tap to write something worth keeping." android:textColor="#AEBFAE" android:textSize="14sp" android:maxLines="4" android:ellipsize="end" android:fontFamily="monospace"/>
+  <TextView android:id="@+id/widget_row0" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="44dp" android:gravity="center_vertical" android:textSize="14sp" android:maxLines="1" android:ellipsize="end" android:textColor="#E9F0E4" android:visibility="gone" android:fontFamily="monospace"/>
+  <TextView android:id="@+id/widget_row1" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="44dp" android:gravity="center_vertical" android:textSize="14sp" android:maxLines="1" android:ellipsize="end" android:textColor="#E9F0E4" android:visibility="gone" android:fontFamily="monospace"/>
+  <TextView android:id="@+id/widget_row2" android:layout_width="match_parent" android:layout_height="wrap_content" android:minHeight="44dp" android:gravity="center_vertical" android:textSize="14sp" android:maxLines="1" android:ellipsize="end" android:textColor="#E9F0E4" android:visibility="gone" android:fontFamily="monospace"/>
+  <ProgressBar android:id="@+id/widget_progress" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="6dp" android:layout_marginTop="12dp" android:visibility="gone"/>
+  <LinearLayout android:id="@+id/widget_actions" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:gravity="center_vertical" android:visibility="gone">
+    <FrameLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="48dp" android:layout_marginEnd="8dp">
+      <ImageView android:id="@+id/widget_action_bg0" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" android:src="@drawable/moss_chip" android:importantForAccessibility="no" android:contentDescription="@null"/>
+      <TextView android:id="@+id/widget_action0" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:textSize="14sp" android:fontFamily="monospace" android:textColor="#E9F0E4" android:maxLines="1" android:text="1 min"/>
+    </FrameLayout>
+    <FrameLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="48dp" android:layout_marginEnd="8dp">
+      <ImageView android:id="@+id/widget_action_bg1" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" android:src="@drawable/moss_chip" android:importantForAccessibility="no" android:contentDescription="@null"/>
+      <TextView android:id="@+id/widget_action1" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:textSize="14sp" android:fontFamily="monospace" android:textColor="#E9F0E4" android:maxLines="1" android:text="5 min"/>
+    </FrameLayout>
+    <FrameLayout android:layout_width="0dp" android:layout_weight="1" android:layout_height="48dp" android:layout_marginEnd="0dp">
+      <ImageView android:id="@+id/widget_action_bg2" android:layout_width="match_parent" android:layout_height="match_parent" android:scaleType="fitXY" android:src="@drawable/moss_chip" android:importantForAccessibility="no" android:contentDescription="@null"/>
+      <TextView android:id="@+id/widget_action2" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:textSize="14sp" android:fontFamily="monospace" android:textColor="#E9F0E4" android:maxLines="1" android:text="10 min"/>
+    </FrameLayout>
+  </LinearLayout>
+</LinearLayout>
+</FrameLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"/>
+    <queries>
+        <intent><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent>
+        <intent><action android:name="android.intent.action.SET_ALARM" /></intent>
+        <intent><action android:name="android.intent.action.SET_TIMER" /></intent>
+    </queries>
+    <application android:label="Nook" android:theme="@style/Theme.Nook"
+        android:icon="@drawable/ic_nook" android:roundIcon="@drawable/ic_nook"
+        android:allowBackup="false" android:supportsRtl="true">
+        <activity android:name=".MainActivity" android:exported="true" android:launchMode="singleTop" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".WidgetConfigActivity" android:exported="true">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" /></intent-filter>
+        </activity>
+        <activity android:name=".StockLibraryActivity" android:exported="false"/>
+        <activity android:name=".VideoPlayerActivity" android:exported="false" android:supportsPictureInPicture="true" android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout" android:excludeFromRecents="false"/>
+        <activity android:name=".ExtraActivity" android:exported="false"/>
+        <activity android:name=".WidgetUtilityActivity" android:exported="false" android:theme="@style/Theme.Nook" android:excludeFromRecents="true"/>
+        <service android:name=".MediaListener" android:label="Nook media controls" android:exported="true" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"><intent-filter><action android:name="android.service.notification.NotificationListenerService"/></intent-filter></service>
+        <service android:name=".WeatherJob" android:exported="true" android:permission="android.permission.BIND_JOB_SERVICE"/>
+        <receiver android:name=".WeatherRefreshReceiver" android:exported="false"/>
+        <receiver android:name=".DeviceChangedReceiver" android:exported="false"><intent-filter><action android:name="android.intent.action.ACTION_POWER_CONNECTED"/><action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/><action android:name="android.intent.action.BATTERY_LOW"/><action android:name="android.intent.action.BATTERY_OKAY"/></intent-filter></receiver>
+        <receiver android:name=".Widgets$Battery" android:exported="false" android:label="Nook · Battery"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_battery"/></receiver>
+        <receiver android:name=".Widgets$Calendar" android:exported="false" android:label="Nook · Calendar"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_calendar"/></receiver>
+        <receiver android:name=".Widgets$Agenda" android:exported="false" android:label="Nook · Agenda"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_agenda"/></receiver>
+        <receiver android:name=".Widgets$Weather" android:exported="false" android:label="Nook · Weather"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_weather"/></receiver>
+        <receiver android:name=".Widgets$Photos" android:exported="false" android:label="Nook · Photos"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_photos"/></receiver>
+        <receiver android:name=".Widgets$WorldClock" android:exported="false" android:label="Nook · World clocks"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_worldclock"/></receiver>
+        <receiver android:name=".Widgets$Countdown" android:exported="false" android:label="Nook · Countdown"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_countdown"/></receiver>
+        <receiver android:name=".Widgets$Contacts" android:exported="false" android:label="Nook · Favorites"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_contacts"/></receiver>
+        <receiver android:name=".Widgets$Search" android:exported="false" android:label="Nook · Search"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_search"/></receiver>
+        <receiver android:name=".Widgets$Controls" android:exported="false" android:label="Nook · Controls"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_controls"/></receiver>
+        <receiver android:name=".Widgets$Music" android:exported="false" android:label="Nook · Music"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_music"/></receiver>
+        <activity android:name=".QuickActionActivity" android:exported="false" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:excludeFromRecents="true" />
+        <receiver android:name=".WidgetActionReceiver" android:exported="false" />
+        <receiver android:name=".ReminderReceiver" android:exported="false" />
+        <receiver android:name=".NoteExpiryReceiver" android:exported="false" />
+        <receiver android:name=".Widgets$Universal" android:exported="false" android:label="Nook · Universal widget">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_universal" />
+        </receiver>
+        <receiver android:name=".BootReceiver" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+                <action android:name="android.intent.action.DATE_CHANGED" />
+                <action android:name="android.app.action.SCHEDULE_EXACT_ALARM_PERMISSION_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".Widgets$Notes" android:exported="false" android:label="Nook · Notes">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_notes" />
+        </receiver>
+        <receiver android:name=".Widgets$Reminders" android:exported="false" android:label="Nook · Reminders">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_reminders" />
+        </receiver>
+        <receiver android:name=".Widgets$Timers" android:exported="false" android:label="Nook · Quick timers">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_timers" />
+        </receiver>
+        <receiver android:name=".Widgets$Alarms" android:exported="false" android:label="Nook · Quick alarms">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_alarms" />
+        </receiver>
+        <receiver android:name=".Widgets$Checklist" android:exported="false" android:label="Nook · Checklist">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_checklist" />
+        </receiver>
+        <receiver android:name=".Widgets$Habits" android:exported="false" android:label="Nook · Daily habits">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_habits" />
+        </receiver>
+        <receiver android:name=".Widgets$Clock" android:exported="false" android:label="Nook · Day clock">
+            <intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE" /></intent-filter>
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_clock" />
+        </receiver>
+        <receiver android:name=".Widgets$Stopwatch" android:exported="false" android:label="Nook · Stopwatch"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_stopwatch"/></receiver>
+        <receiver android:name=".Widgets$Compass" android:exported="false" android:label="Nook · Compass"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_compass"/></receiver>
+        <receiver android:name=".Widgets$Recorder" android:exported="false" android:label="Nook · Recorder"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_recorder"/></receiver>
+        <receiver android:name=".Widgets$ScreenTime" android:exported="false" android:label="Nook · ScreenTime"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_screentime"/></receiver>
+        <receiver android:name=".Widgets$DeviceCare" android:exported="false" android:label="Nook · DeviceCare"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_devicecare"/></receiver>
+        <receiver android:name=".Widgets$Tracker" android:exported="false" android:label="Nook · Tracker"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_tracker"/></receiver>
+        <receiver android:name=".Widgets$Files" android:exported="false" android:label="Nook · Files"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_files"/></receiver>
+        <receiver android:name=".Widgets$Bookmarks" android:exported="false" android:label="Nook · Bookmarks"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_bookmarks"/></receiver>
+        <receiver android:name=".Widgets$Shortcuts" android:exported="false" android:label="Nook · Shortcuts"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_shortcuts"/></receiver>
+        <receiver android:name=".Widgets$Maps" android:exported="false" android:label="Nook · Maps"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_maps"/></receiver>
+        <receiver android:name=".Widgets$Translate" android:exported="false" android:label="Nook · Translate"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_translate"/></receiver>
+        <receiver android:name=".Widgets$Breathing" android:exported="false" android:label="Nook · Breathing"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_breathing"/></receiver>
+        <receiver android:name=".Widgets$News" android:exported="false" android:label="Nook · News"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_news"/></receiver>
+        <receiver android:name=".Widgets$Stocks" android:exported="false" android:label="Nook · Stocks"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_stocks"/></receiver>
+        <receiver android:name=".Widgets$Service" android:exported="false" android:label="Nook · Service"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_service"/></receiver>
+        <receiver android:name=".Widgets$Tips" android:exported="false" android:label="Nook · Tips"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_tips"/></receiver>
+        <receiver android:name=".Widgets$Animation" android:exported="false" android:label="Nook · Animation"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_animation"/></receiver>
+        <receiver android:name=".Widgets$Slideshow" android:exported="false" android:label="Nook · Slideshow"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_slideshow"/></receiver>
+        <receiver android:name=".Widgets$Video" android:exported="false" android:label="Nook · Video"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_video"/></receiver>
+    </application>
+</manifest>

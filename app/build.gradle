@@ -7,8 +7,8 @@ android {
         applicationId 'com.nook.widgets'
         minSdk 28
         targetSdk 35
-        versionCode 11
-        versionName '0.10.0'
+        versionCode 12
+        versionName '0.11.0'
         testInstrumentationRunner 'com.nook.widgets.test.NookSmokeInstrumentation'
     }
     compileOptions {

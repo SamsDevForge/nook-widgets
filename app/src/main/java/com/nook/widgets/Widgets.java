@@ -73,6 +73,7 @@ public final class Widgets {
         return new Class<?>[]{Notes.class,Reminders.class,Timers.class,Alarms.class,Checklist.class,Habits.class,Clock.class,Battery.class,Calendar.class,Agenda.class,Weather.class,Photos.class,WorldClock.class,Countdown.class,Contacts.class,Search.class,Controls.class,Music.class}[index(kind)];
     }
     public static String kindOf(ComponentName provider) {
+        if(provider.getClassName().equals(VideoPortrait.class.getName())||provider.getClassName().equals(VideoSquare.class.getName()))return "video";
         for (String k : CATALOG) if (provider(k).getName().equals(provider.getClassName())) return k;
         return "notes";
     }
@@ -82,9 +83,10 @@ public final class Widgets {
         catch (org.json.JSONException e) { throw new IllegalStateException(e); }
         return j;
     }
+    public static Class<?>[] providers(String kind){return kind.equals("video")?new Class<?>[]{Video.class,VideoPortrait.class,VideoSquare.class}:new Class<?>[]{provider(kind)};}
     public static void updateAll(Context c) {
         AppWidgetManager m = AppWidgetManager.getInstance(c);
-        for (String kind : CATALOG) for (int id : m.getAppWidgetIds(new ComponentName(c, provider(kind)))) update(c, id, kind);
+        for (String kind : CATALOG) for(Class<?> type:providers(kind))for (int id : m.getAppWidgetIds(new ComponentName(c,type))) update(c,id,kind);
     }
     public static void update(Context c, int id, String kind) {
         AppWidgetManager m = AppWidgetManager.getInstance(c);
@@ -99,6 +101,7 @@ public final class Widgets {
         if(preview){try{config=new JSONObject(config.toString()).put("_preview",true);}catch(Exception e){throw new IllegalStateException(e);}}
         if(kind.equals("universal"))return UniversalWidget.render(c,id,config,small,preview);
         if(kind.equals("clock")&&config.optBoolean("quickLook",false))return QuickLookWidget.render(c,id,config,small,preview);
+        if(kind.equals("video"))return VideoWidgets.render(c,id,config,small,preview);
         if(MediaWidgets.supports(kind))return MediaWidgets.render(c,id,kind,config,small,preview);
         if(ExtraKinds.index(kind)>=0)return ExtraWidgets.render(c,id,kind,config,small,preview);
         if(index(kind)>=7)return LibraryWidgets.render(c,id,kind,config,small,preview);
@@ -275,7 +278,7 @@ public final class Widgets {
         protected abstract String kind();
         @Override public void onUpdate(Context c,AppWidgetManager m,int[] ids){if(kind().equals("notes")||kind().equals("universal"))NoteLife.refresh(c);for(int id:ids)update(c,id,kind());if(kind().equals("weather")||kind().equals("universal")||kind().equals("clock"))c.sendBroadcast(new Intent(c,WeatherRefreshReceiver.class));}
         @Override public void onAppWidgetOptionsChanged(Context c,AppWidgetManager m,int id,Bundle options) { update(c,id,kind()); }
-        @Override public void onDeleted(Context c,int[] ids) { for(int id:ids) Store.removeConfig(c,id); }
+        @Override public void onDeleted(Context c,int[] ids) { for(int id:ids){Store.removeConfig(c,id);InlineVideoState.reset(c,id);} }
     }
     public static class Notes extends Base { protected String kind(){return "notes";} }
     public static class Reminders extends Base { protected String kind(){return "reminders";} }
@@ -315,4 +318,6 @@ public final class Widgets {
     public static class Animation extends Base{protected String kind(){return "animation";}}
     public static class Slideshow extends Base{protected String kind(){return "slideshow";}}
     public static class Video extends Base{protected String kind(){return "video";}}
+    public static class VideoPortrait extends Base{protected String kind(){return "video";}}
+    public static class VideoSquare extends Base{protected String kind(){return "video";}}
 }

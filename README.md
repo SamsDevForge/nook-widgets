@@ -2,16 +2,16 @@
 
 A native Android home screen widget collection with a coordinated, customizable design. Android 9 or newer. No Nook account required; optional weather uses Open-Meteo.
 
-Choose 37 dedicated tools or one Universal widget that switches between them. Apple, macOS, Pixel, Samsung, and Nothing catalogs offer named stock-family counterparts, with classic and Liquid Glass appearances. Version 0.10.0.
+Choose 37 dedicated tools or one Universal widget that switches between them. Apple, macOS, Pixel, Samsung, and Nothing catalogs offer named stock-family counterparts, with classic and Liquid Glass appearances. Version 0.11.0.
 
 **[Download the latest APK](https://github.com/SamsDevForge/nook-widgets/releases/latest/download/Nook.apk)** · [Latest release and checksums](https://github.com/SamsDevForge/nook-widgets/releases/latest) · [Installation](#install) · [Build from source](#build) · [Verification report](dist/verification.md)
 
-Nook includes temporary and permanent notes, reminders, timer/alarm shortcuts, clocks, calendars, weather, personal trackers, animated scenes, photo slideshows and video previews. Use a dedicated widget for one task or switch tools inside Universal. Everything uses native Android widgets and Java, with no third-party runtime libraries, ads, analytics or Nook account.
+Nook includes temporary and permanent notes, reminders, timer/alarm shortcuts, clocks, calendars, weather, personal trackers, animated scenes, photo slideshows and full-length silent video. Use a dedicated widget for one task or switch tools inside Universal. Everything uses native Android widgets and Java, with no third-party runtime libraries, ads, analytics or Nook account.
 
 <p>
   <img src="dist/screenshots/animation-homescreen.png" width="220" alt="Animated Liquid Glass widget on the Android home screen" />
   <img src="dist/screenshots/liquid-glass-homescreen.png" width="220" alt="Native Liquid Glass clock on the Android home screen" />
-  <img src="dist/screenshots/video-floating.png" width="220" alt="Video preview widget with real floating picture-in-picture playback" />
+  <img src="dist/screenshots/inline-video-homescreen.png" width="220" alt="Full-length silent video playing inside the Android home screen widget" />
 </p>
 
 Native Android captures; the photos and video used in media previews are generated sample content. [Watch the home screen animation](dist/previews/motion-homescreen.mp4).
@@ -64,25 +64,27 @@ The additional dedicated tools are:
 | Tips | Original Nook usage tips with previous/next controls |
 | Animated scenes | Liquid orbit, soft pulse, ripple and dot wave; pace, pause/resume and change controls |
 | Photo slideshow | Up to six chosen photos; fade/cut, crop/fit, 2–60 seconds per photo, pause and next |
-| Video frame | Silent looping frame preview or still poster; full player, sound controls and floating PiP |
+| Video carousel | Full-length silent playback inside the widget, up to 12 videos, Previous/Next, pause, native aspect and hidden text |
 
 ## Animations and video
 
-Open **Widgets → Motion** to find the three new tools, or **Widgets → Video** for the video frame. They can also be selected inside Universal. All eight designs, four surfaces, transparency and appearance options remain available.
+Open **Widgets → Motion** to find the three new tools, or **Widgets → Video** for the video carousel. They can also be selected inside Universal. All eight designs, four surfaces, transparency and appearance options remain available.
 
 **Animated scenes** offers four original looping compositions: Liquid orbit, Soft pulse, Ripple and Dot wave. Choose Lively, Gentle or Slow. Pause/Resume and Change work from the widget. These use Android's native view animation/sequence support in the launcher, without a continuously running Nook service or repeated background widget updates.
 
 **Photo slideshow** uses up to six images chosen through Android's document picker. Select Soft fade or Direct cut, Crop or Fit, and 2–60 seconds per photo. Pause motion for a still image; Next changes the photo. Unavailable or removed photos are skipped. Each copy has its own choices.
 
-**Video frame** uses a video you select from the phone's document picker. Choosing a video prepares its preview locally. Set the segment's start in seconds and a length of 1–6 seconds, then choose **Update looping preview** after changing the segment. **Silent looping preview** shows up to 16 extracted frames; **Poster only** uses a still. Preview resolution and frame count are bounded to fit Android's widget bitmap budget, so this is a low-resolution frame loop rather than full-length, full-frame-rate video playback. The selected source file is not uploaded or modified.
+**Video carousel** plays the full selected video **inside the home screen widget, silently**. Choose **Full video · silent inline**, select up to 12 local videos, and use the icon controls for Previous, Pause/Play and Next. Both directions wrap around the carousel. Each widget copy keeps its own selection and pause state; this also works inside Universal.
 
-Tap **Play** for the native player, including seeking, pause/play, a Mute/Unmute button and optional repeat. Full playback starts muted by default; change that in widget options. **Float** opens the player's Android picture-in-picture window over the home screen or other apps. Floating playback needs device support and PiP permission for Nook. Leaving the normal player pauses it; entering PiP keeps it playing. Full video plays in the player/PiP rather than inside the RemoteViews widget surface.
+Choose **Hide all text · icons only** to remove labels, filenames and counters. **Match the selected video** chooses a landscape, square or portrait provider when adding the widget through Nook. Rotation metadata is respected. **Fit** preserves the entire video; **Fill** crops its edges. Android launchers control the outer grid size: long-press to resize a placed widget. Switching to a differently shaped video fits it into the existing space, without changing neighboring home screen items.
 
-Frame previews are cached in Nook's private storage. They can still display while the source is temporarily unavailable, but full playback needs access to the selected file. If access expires or the video format is unsupported, choose the file again or another supported video. Clear removes the widget's selection without deleting the original source. Uninstalling clears private previews. Motion and transition behavior can vary by launcher and power settings; the widget provides its own Pause option.
+Inline playback streams frames from the complete video using Android's decoder and an adapter-backed native widget view. It is a silent, lower-resolution presentation (up to a 320-pixel long edge), with 3, 5 or 8 requested frames per second. It is not a full-frame-rate video surface, and performance depends on the codec, phone, launcher and power settings. The launcher keeps a bounded collection cache; Nook does not bake the entire video into memory or run a repeating foreground-service widget update loop. **Still poster** and a **1–6 second short loop** remain optional modes.
 
-Native checks exercise attached animations, chosen photo transitions, generated MP4 decoding, real full playback and actual PiP. Their media is generated test content. See [animated widget](dist/screenshots/animated-widget.png), [slideshow](dist/screenshots/slideshow-widget.png), [video preview](dist/screenshots/video-widget.png), [player](dist/screenshots/video-player.png) and [floating video](dist/screenshots/video-floating.png).
+Selected files are read locally and are never uploaded or modified. The document picker grants lasting read access; posters and paused frames are stored privately. If a source moves, becomes inaccessible or uses an unsupported format, select it again or choose another supported file. Removing it from the carousel leaves the original file intact. Uninstalling clears Nook's private data.
 
-An animated scene was also placed through the launcher's normal Add flow. See its [actual home screen placement](dist/screenshots/animation-homescreen.png) and [motion recording](dist/previews/motion-homescreen.mp4).
+For optional full-resolution playback with audio, a placed widget's Options screen offers **Open saved video in full-screen player**. That player includes seeking, mute/unmute and Android picture-in-picture. Normal widget transport stays inside the widget.
+
+Native tests use generated videos and check visible playback past six seconds, the end and wraparound of a 12-second source, real carousel controls, pause/resume, orientation, aspect providers and Universal integration. [Actual home screen capture](dist/screenshots/inline-video-homescreen.png) · [15-second launcher recording](dist/previews/inline-video-homescreen.mp4) · [Generated 12-second source](dist/previews/inline-proof-source.mp4).
 
 ## Stock-family catalogs
 
@@ -210,7 +212,7 @@ Requires **Android 9 or newer** and a launcher that supports Android widgets.
 5. Open **Nook**. Create notes, reminders, tasks and habits in **Library**.
 6. Go to **Widgets**, choose a tool, customize its appearance, and select **Add to home screen**. Confirm placement in your launcher.
 
-You can also long-press an empty spot on the home screen → **Widgets → Nook**. Add several copies with independent settings, and long-press a placed widget to resize it. Tap **···** to edit its settings. **Widgets → Motion / Video** contains the animated scenes, slideshow and video frame.
+You can also long-press an empty spot on the home screen → **Widgets → Nook**. Add several copies with independent settings, and long-press a placed widget to resize it. Tap **···** to edit its settings. **Widgets → Motion / Video** contains the animated scenes, slideshow and video carousel.
 
 This release is distributed as a development APK signed with the project's existing local development key. Future release updates need the same signing identity to preserve in-place upgrades. Install the new APK over the existing app to keep its local data; uninstalling clears that data. A separately built Android Studio APK normally uses a different debug key and may conflict with the installed release.
 
@@ -228,7 +230,7 @@ adb -s DEVICE_SERIAL shell am start -n com.nook.widgets/.MainActivity
 
 Replace `DEVICE_SERIAL` with the serial shown by `adb devices`. Selecting a serial is useful when more than one phone is connected. If the device is listed as **unauthorized**, unlock it and accept its debugging prompt. If the phone asks to confirm installation over USB, approve it there.
 
-Package: `com.nook.widgets` · Current version: `0.10.0` · Minimum Android API: `28`.
+Package: `com.nook.widgets` · Current version: `0.11.0` · Minimum Android API: `28`.
 
 ## Reminders and permissions
 
@@ -281,7 +283,7 @@ Widget resources are checked in. `tools/generate-resources.mjs` reproduces the l
 
 ### Validation
 
-Version 0.10.0 passed **19,769 integration checks** on the isolated Android 35 emulator, including actual widget binding, animation, MP4 decoding, playback and picture-in-picture. Installation and app launch were also verified on **OnePlus CPH2717 / Android 16** and **vivo V2222 / Android 15** on 26 November 2026. That phone check does not establish complete widget, codec or hardware coverage on those devices. See the [verification report](dist/verification.md).
+Version 0.11.0 passed **19,808 integration checks**, including **40 focused inline-video checks**, on the isolated Android 35 emulator, including actual widget binding, animation, MP4 decoding, playback and picture-in-picture. The previous 0.10.0 release was installed and launched on **OnePlus CPH2717 / Android 16** and **vivo V2222 / Android 15**. The phones were disconnected for 0.11.0, so this release has no new physical-device verification. See the [verification report](dist/verification.md).
 
 ## Device integration checks
 
@@ -293,11 +295,12 @@ Version 0.10.0 passed **19,769 integration checks** on the isolated Android 35 e
 ./tools/test.ps1 -StockOnly
 ./tools/test.ps1 -LibraryOnly
 ./tools/test.ps1 -MediaOnly
+./tools/test.ps1 -InlineOnly
 # Optional live public-feed check (requires internet):
 ./tools/test.ps1 -SourceOnly
 ```
 
-The script targets `emulator-5556` by default and refuses physical phone serials. It installs the app and test APK, grants reminder permissions on that emulator, and checks native rendering, configuration, persistence, transparency, temporary-note recovery, reminders, Universal switching and design controls across the 38 providers. Device-backed cases exercise battery data, a temporary photo/calendar event and a test media session. Stock checks export the catalog, bind the new providers, exercise real stopwatch/tracker actions, reject unsafe feed documents and verify that selected wallpaper blur/refraction changes rendered pixels. Source-dependent hardware and authenticated account behavior still need testing on a physical phone with your permissions and provider credentials. Media checks create their own sample photos and a valid encoded MP4, test actual attached frame changes and photo fades, check pause/resume/next actions, and verify full and PiP playback. Screenshots and native-rendered boards are saved for review.
+The script targets `emulator-5556` by default and refuses physical phone serials. It installs the app and test APK, grants reminder permissions on that emulator, and checks native rendering, configuration, persistence, transparency, temporary-note recovery, reminders, Universal switching and design controls across the 40 providers (38 tool entries plus two video aspect variants). Device-backed cases exercise battery data, a temporary photo/calendar event and a test media session. Stock checks export the catalog, bind the new providers, exercise real stopwatch/tracker actions, reject unsafe feed documents and verify that selected wallpaper blur/refraction changes rendered pixels. Source-dependent hardware and authenticated account behavior still need testing on a physical phone with your permissions and provider credentials. Media checks create their own sample photos and a valid encoded MP4, test actual attached frame changes and photo fades, check pause/resume/next actions, and verify full and PiP playback. Inline video checks observe actual visible frames through the full source, carousel wraparound, pause/resume, rotated portrait/square media and Universal. Screenshots and native-rendered boards are saved for review.
 
 `tools/start-test-emulator.ps1` starts the isolated, hidden `NookTest` AVD when the official emulator and Android 35 x86_64 image have been unpacked under `.tooling/emulator` and `.tooling/system-image`. It uses existing Windows Hypervisor Platform support and writes its AVD files inside this project.
 

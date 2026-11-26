@@ -1,58 +1,45 @@
-# Nook 0.10.0 verification
+# Nook 0.11.0 verification
 
-Reviewed on 23 November 2026 using the isolated Android 35 NookTest emulator. The app targets Android 9 or newer. On 26 November 2026, the same APK was installed and launched successfully on a OnePlus CPH2717 running Android 16 and a vivo V2222 running Android 15. Those are installation/launch checks; full physical widget, codec and hardware coverage remains unverified.
+Reviewed on 26 November 2026 using the isolated Android 35 NookTest emulator. Minimum Android version: 9 (API 28). The portable APK uses the existing development signing key for in-place upgrades.
 
 ## Results
 
-- The final build passed **19,769 integration checks** in the complete regression suite. This includes the original tools, all 38 providers, seven Universal picker pages, 37 tool views, styles, exact transparency, saved configuration, notes/lifetimes/recovery, reminders, device-backed data and the new media suite.
-- The dedicated media suite passed **410 checks**, including real attached frame advancement, photo fades, pause/resume/change/next, MP4 encoding and decoding, video frame changes, full video playback and actual Android picture-in-picture.
-- The APK built with Java 17 and Android SDK 35. Signature Scheme v3 verification passed with the existing development key, preserving in-place updates from earlier portable builds.
+- The focused inline-video suite passed **40 checks**. It verifies actual adapter-backed image views, visible frames after six seconds, the final second and loop of a 12-second source, pause/resume, frozen frames, real Previous/Next controls, wraparound, rotated portrait/square video, aspect-provider binding, Universal playback and independent widget copies.
+- The complete regression suite passed **19,808 checks**, covering the original tools, design/typography/transparency, note lifetimes and recovery, native bindings, data-backed integrations, full/PiP playback and the new inline suite.
+- A generated 12-second video was pinned through Android's real launcher confirmation. The launcher belongs to a different app UID; it successfully bound the frame service and displayed the video on the actual home screen. A 15-second screen recording and native screenshot are included below.
+- Java 17 / Android SDK 35 build and APK Signature Scheme v3 verification passed. Version code: 12.
 
-## New media tools
+## Video behavior
 
-- **Animated scenes:** four original Canvas compositions, three speeds, pause/resume and scene switching. Frames cycle through a native ViewFlipper in the launcher. Pause replaces the sequence with a still view.
-- **Photo slideshow:** up to six individually chosen photos, fade or cut, crop/fit, 2–60 seconds per photo, pause and next. Native tests created and removed their own sample images, verified a real fade animation and observed the displayed photo change.
-- **Video frame:** selected local video, a 1–6 second silent frame loop or still poster, and Play/Float/Options controls. The segment start is editable. Choosing a video prepares it locally; changing the segment requires Update looping preview. Preparation runs off the UI thread, reports actual progress and refreshes placed widgets on completion.
-- Widget video is a bounded, low-resolution preview with up to 16 extracted frames, rather than full-length or full-frame-rate video. No audio plays in the widget. The frame images are cached privately and scaled to the widget bitmap budget; no continuous Nook foreground service or repeated background widget-update loop is used.
-- **Play** opens a native VideoView player with seeking, play/pause, mute/unmute and optional repeat. Playback starts muted by default. **Float** opens the real Android PiP window; the test observed the activity enter PiP and verified that playback continued. Leaving the normal player pauses video.
-- All eight design languages, four surfaces, transparency and typography options remain available. Compact layouts were checked across every design/surface combination for visible image space and controls within bounds. Animated image descendants are hidden from accessibility traversal; the media stage supplies a meaningful description.
-- The real Android document-picker flow was reviewed: selecting the generated sample in Downloads granted access, automatically prepared its preview, and reached the normal launcher Add confirmation. The video widget was then placed through that confirmation, with its chosen source retained.
+The video tool now plays the complete source silently inside an AdapterViewFlipper backed by a RemoteViewsService. A sequential MediaCodec decoder reads only the video track; MediaMetadataRetriever supplies a compatibility fallback. The launcher requests frames lazily and keeps a bounded cache. Nook retains a single recent frame per active widget for pause snapshots; it does not embed every source frame in RemoteViews, start an audio track, or run a repeating foreground-service widget-update loop.
+
+Up to 12 individually selected videos can form a carousel. Previous/Next wrap around and preserve pause state. Each copy, including Universal, owns its selection and transport state. Existing single-video configurations continue to work. A hidden-text option removes captions, filenames and counters, including Universal's captions, while retaining accessible icon controls. Full video is the default; still poster and a 1–6 second short loop remain available.
+
+Initial placement can match the selected video's landscape, square or portrait shape. Rotation metadata and the video's aspect are respected. The launcher's outer grid remains under launcher/user control; mixed-aspect videos fit or crop within that slot. A placed widget cannot force its neighbors to move or automatically resize its outer grid when the carousel advances.
+
+There are 37 tool families plus Universal (38 catalog entries), with two additional video aspect providers: **40 registered widget providers**. Stock-family coverage remains 149 named entries / 912 layout-size presets.
 
 ## Native evidence
 
-The images below are native captures. Sample photos and the short MP4 are generated test media, not personal files or remote content.
+All media here is generated test content. No personal phone media or screenshots are published.
 
-- [Animated widget](screenshots/animated-widget.png)
-- [Photo slideshow](screenshots/slideshow-widget.png)
-- [Video widget](screenshots/video-widget.png)
-- [Full player](screenshots/video-player.png)
-- [Actual floating playback](screenshots/video-floating.png)
-- [Generated test clip](previews/sample-motion.mp4)
-- [Actual animated home screen placement](screenshots/animation-homescreen.png)
-- [Home screen motion recording](previews/motion-homescreen.mp4)
-
-The animation was added through the normal launcher confirmation, then recorded on the actual home screen. The video source picker and [video placement confirmation](screenshots/video-pin-ready.png) were also reviewed with generated media.
-
-## Existing features retained
-
-The Pixel clock's symmetric face/hand alignment checks remain in the regression suite. Temporary and permanent notes, expiry recovery, checklist/habit actions, reminder notifications, independent widget copies and Universal per-tool settings remain covered. Existing city weather, Android calendars, selected photos, battery data and media-session controls retain their sources and permissions.
-
-Liquid Glass still supports clear/tinted appearances, 0–100% transparency and selected-wallpaper crop/blur/refraction. Text and controls retain their opacity. Its optical material is independently rendered for Android and uses a static selected image for blur/refraction, rather than sampling the launcher wallpaper live. The earlier [home screen capture](screenshots/liquid-glass-homescreen.png) and [comparison board](screenshots/liquid-glass.png) document that appearance.
-
-The five stock-family catalogs remain at 149 entries and 912 layout/size presets. These counts include repeated categories and sizes, rather than distinct proprietary integrations. [Coverage](stock-library-coverage.md) and [inventory](stock-catalog.json) identify their sources. Private vendor services remain explicitly labeled manual cards/app shortcuts; health-style logs use user entries.
+- [Actual launcher screenshot](screenshots/inline-video-homescreen.png)
+- [15-second home screen recording](previews/inline-video-homescreen.mp4)
+- [Generated 12-second video source](previews/inline-proof-source.mp4)
+- [Instrumentation source](../app/src/androidTest/java/com/nook/widgets/test/InlineVideoSmoke.java)
 
 ## Limits and privacy
 
-Media selection uses persisted, individual document grants, without broad photo/video-library permission. Video files are not uploaded or modified. Full playback requires the original file and its grant; cached previews can outlast temporary source unavailability. Clear removes the selection without deleting the source file. Preview caches are private and removed on uninstall.
+Inline playback is silent, frame-based and lower resolution, with a long edge up to 320 pixels and 3, 5 or 8 requested frames per second. It is not native full-frame-rate HD video. Actual speed depends on the codec, phone, launcher and power settings. HDR, DRM, uncommon codecs and manufacturer-specific launcher behavior have not been comprehensively tested. Automated fixtures use AVC with no audio track.
 
-Supported codecs, HDR/DRM behavior, audio output and PiP availability depend on the phone and Android settings. Automated media uses a generated AVC MP4 with no audio track; real-device audio routing and manufacturer-specific PiP/launcher behavior remain unverified. Streaming URLs, custom GIF import and playback of an entire video inside a standard widget are not included.
+The document picker grants access to individual selected files. Sources are read locally, never uploaded or modified; posters and paused frames remain private. Removing a carousel item leaves its source intact. Playback needs continuing access to the original source. The optional full-screen player and PiP remain separate, explicit actions for full-resolution playback/audio.
 
-The existing optional calendar, usage, microphone and media access remain separate. Weather, RSS and authenticated quote integrations retain their prior setup requirements. No microphone recording or private account access was used for these media checks.
+Neither physical phone was connected for this release. The previous 0.10.0 APK was installed and launched on OnePlus CPH2717 / Android 16 and vivo V2222 / Android 15; those checks do not establish 0.11.0 codec or launcher coverage.
 
-Platform references: [RemoteViews supported views](https://developer.android.com/reference/android/widget/RemoteViews), [ViewFlipper](https://developer.android.com/reference/android/widget/ViewFlipper), [video frame retrieval](https://developer.android.com/reference/android/media/MediaMetadataRetriever), [Android PiP](https://developer.android.com/develop/ui/views/picture-in-picture).
+Platform references: [RemoteViews supported views](https://developer.android.com/reference/android/widget/RemoteViews), [collection widgets](https://developer.android.com/develop/ui/views/appwidgets/collections), [widget sizing](https://developer.android.com/develop/ui/views/appwidgets/layouts), [MediaCodec](https://developer.android.com/reference/android/media/MediaCodec).
 
 APK SHA-256:
 
 ```text
-37DE397177C1900976C22B414B5B7F78AB2E95E4DA7E99362D89A269ADD1DAA8
+D9847A57FD1A8516160703971FE26709F0D0B989E5C27042B3D522B8CDA37821
 ```

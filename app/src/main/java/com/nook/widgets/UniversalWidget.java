@@ -118,6 +118,6 @@ public final class UniversalWidget {
             int index=Widgets.index(page);view.setTextViewText(R.id.hub_count,(index+1)+" / "+Widgets.KINDS.length);view.setContentDescription(R.id.hub_count,"All tools, currently "+label);
             if(!preview){view.setOnClickPendingIntent(R.id.hub_prev,switchIntent(c,id,Widgets.KINDS[(index+Widgets.KINDS.length-1)%Widgets.KINDS.length]));view.setOnClickPendingIntent(R.id.hub_next,switchIntent(c,id,Widgets.KINDS[(index+1)%Widgets.KINDS.length]));view.setOnClickPendingIntent(R.id.hub_count,switchIntent(c,id,"menu"));}
         }
-        WidgetDesign.universal(view,config,compact);return view;
+        WidgetDesign.universal(view,config,compact);if(page.equals("video")&&viewConfig(config,page).optBoolean("videoHideText",false)){view.setViewVisibility(R.id.hub_label,View.GONE);view.setTextViewText(R.id.hub_count,"");}return view;
     }
 }

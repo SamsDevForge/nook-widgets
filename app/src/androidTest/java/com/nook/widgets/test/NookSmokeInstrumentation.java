@@ -18,8 +18,8 @@ import java.util.*;
 public class NookSmokeInstrumentation extends Instrumentation {
     private final List<String[]> created=new ArrayList<>();
     private int assertions;
-    private boolean libraryOnly,stockOnly,sourceOnly,mediaOnly;
-    @Override public void onCreate(Bundle args){super.onCreate(args);libraryOnly=args!=null&&Boolean.parseBoolean(args.getString("libraryOnly","false"));stockOnly=args!=null&&Boolean.parseBoolean(args.getString("stockOnly","false"));sourceOnly=args!=null&&Boolean.parseBoolean(args.getString("sourceOnly","false"));mediaOnly=args!=null&&Boolean.parseBoolean(args.getString("mediaOnly","false"));start();}
+    private boolean libraryOnly,stockOnly,sourceOnly,mediaOnly,inlineOnly,placementOnly;
+    @Override public void onCreate(Bundle args){super.onCreate(args);libraryOnly=args!=null&&Boolean.parseBoolean(args.getString("libraryOnly","false"));stockOnly=args!=null&&Boolean.parseBoolean(args.getString("stockOnly","false"));sourceOnly=args!=null&&Boolean.parseBoolean(args.getString("sourceOnly","false"));mediaOnly=args!=null&&Boolean.parseBoolean(args.getString("mediaOnly","false"));inlineOnly=args!=null&&Boolean.parseBoolean(args.getString("inlineOnly","false"));placementOnly=args!=null&&Boolean.parseBoolean(args.getString("placementOnly","false"));start();}
     private void check(boolean condition,String message){assertions++;if(!condition)throw new AssertionError(message);}
     private Store.Item add(String type,String title,String body) {
         Store.Item i=new Store.Item();i.title=title;i.body=body;Store.save(getTargetContext(),type,i);created.add(new String[]{type,i.id});return i;
@@ -86,32 +86,32 @@ public class NookSmokeInstrumentation extends Instrumentation {
         });
     }
     private void designLifecycle(Context c,AppWidgetHost host,List<Activity> activities) throws Exception {
-        onMain(()->{
-            check(c.getResources().getFont(com.nook.widgets.R.font.nook_dots)!=null,"Original dot display font loads natively");
-            Bitmap sample=Bitmap.createBitmap(280,200,Bitmap.Config.ARGB_8888);
-            for(int design=0;design<WidgetDesign.NAMES.length;design++)for(String kind:Widgets.CATALOG)for(int surface=0;surface<3;surface++)for(int density=0;density<2;density++)try{
+        onMain(()->check(c.getResources().getFont(com.nook.widgets.R.font.nook_dots)!=null,"Original dot display font loads natively"));
+        Bitmap sample=Bitmap.createBitmap(280,200,Bitmap.Config.ARGB_8888);
+        // Release the main thread between families so lifecycle broadcasts can complete.
+        for(int selected=0;selected<WidgetDesign.NAMES.length;selected++){int design=selected;for(String kind:Widgets.CATALOG)onMain(()->{for(int surface=0;surface<3;surface++)for(int density=0;density<2;density++)try{
                 JSONObject config=Widgets.defaults(kind);WidgetDesign.select(config,design);config.put("style",surface).put("density",density).put("transparency",50);
                 View view=Widgets.render(c,990,kind,config,false,true).apply(c,new FrameLayout(c));int height=Ui.dp(c,kind.equals("universal")?(density==0?340:180):(density==0?250:182));view.measure(View.MeasureSpec.makeMeasureSpec(Ui.dp(c,320),View.MeasureSpec.EXACTLY),View.MeasureSpec.makeMeasureSpec(height,View.MeasureSpec.EXACTLY));view.layout(0,0,view.getMeasuredWidth(),height);
                 check(Math.abs(surfacePixelAlpha(view,sample)-(surface==0?255:128))<=1,"Design preserves exact surface transparency");
                 TextView text=view.findViewById(kind.equals("universal")?com.nook.widgets.R.id.hub_label:com.nook.widgets.R.id.widget_title);check(text.getAlpha()==1,"Design typography stays fully visible");
-            }catch(Exception e){throw new RuntimeException("Design="+design+" kind="+kind+" surface="+surface+" density="+density,e);}
-            for(int design=1;design<WidgetDesign.NAMES.length;design++)for(String page:Widgets.KINDS)try{
+            }catch(Exception e){throw new RuntimeException("Design="+design+" kind="+kind+" surface="+surface+" density="+density,e);}});}
+        for(int selected=1;selected<WidgetDesign.NAMES.length;selected++){int design=selected;for(String page:Widgets.KINDS)onMain(()->{try{
                 JSONObject config=Widgets.defaults("universal");WidgetDesign.select(config,design);config.put("page",page).put("textScale",115);View view=Widgets.render(c,990,"universal",config,true,true).apply(c,new FrameLayout(c));int height=Ui.dp(c,180);view.measure(View.MeasureSpec.makeMeasureSpec(Ui.dp(c,320),View.MeasureSpec.EXACTLY),View.MeasureSpec.makeMeasureSpec(height,View.MeasureSpec.EXACTLY));view.layout(0,0,view.getMeasuredWidth(),height);
                 View nav=view.findViewById(com.nook.widgets.R.id.hub_next);check(nav.getVisibility()==View.VISIBLE&&nav.getHeight()>0,"Styled Universal navigation remains usable");
                 View content=view.findViewById(com.nook.widgets.R.id.hub_content);check(content.getHeight()>=Ui.dp(c,90),"Minimum Universal view has room for large text and controls");
-            }catch(Exception e){throw new RuntimeException(e);}
-            for(int font=0;font<=5;font++)for(String kind:Widgets.CATALOG)try{
+            }catch(Exception e){throw new RuntimeException(e);}});}
+        for(int selected=0;selected<=5;selected++){int font=selected;for(String kind:Widgets.CATALOG)onMain(()->{try{
                 JSONObject config=Widgets.defaults(kind);WidgetDesign.select(config,4);config.put("font",font).put("corner",0).put("border",3).put("tone",2).put("accent","#33CC99").put("textScale",115).put("align",2).put("showIcon",false).put("showLabel",false);
                 View view=Widgets.render(c,990,kind,config,false,true).apply(c,new FrameLayout(c));View settings=view.findViewById(kind.equals("universal")?com.nook.widgets.R.id.hub_settings:com.nook.widgets.R.id.widget_settings);check(settings.getVisibility()==View.VISIBLE,"Fine tuning preserves customization access");
                 View label=view.findViewById(kind.equals("universal")?com.nook.widgets.R.id.hub_label:com.nook.widgets.R.id.widget_label);check(label.getVisibility()!=View.VISIBLE,"Header label can be hidden");
-            }catch(Exception e){throw new RuntimeException(e);}
-            check(WidgetDesign.validAccent("#A1B2C3")&&!WidgetDesign.validAccent("#ABC")&&!WidgetDesign.validAccent("#GGGGGG"),"Accent validation rejects malformed colors");sample.recycle();
-            for(int design=0;design<WidgetDesign.NAMES.length;design++)for(int palette=0;palette<6;palette++)for(int tone=1;tone<=2;tone++)try{
+            }catch(Exception e){throw new RuntimeException(e);}});}
+        check(WidgetDesign.validAccent("#A1B2C3")&&!WidgetDesign.validAccent("#ABC")&&!WidgetDesign.validAccent("#GGGGGG"),"Accent validation rejects malformed colors");
+        sample.recycle();
+        for(int design=0;design<WidgetDesign.NAMES.length;design++)for(int palette=0;palette<6;palette++)for(int tone=1;tone<=2;tone++)try{
                 JSONObject config=Widgets.defaults("notes");WidgetDesign.select(config,design);config.put("paletteCustom",true).put("palette",palette).put("tone",tone);WidgetDesign.Colors colors=WidgetDesign.colors(config,"notes");
                 double bg=android.graphics.Color.luminance(colors.surface),fg=android.graphics.Color.luminance(colors.text),muted=android.graphics.Color.luminance(colors.muted);
                 check((Math.max(bg,fg)+.05)/(Math.min(bg,fg)+.05)>=4.5,"Tinted design preserves readable primary text");check((Math.max(bg,muted)+.05)/(Math.min(bg,muted)+.05)>=4.5,"Tinted design preserves readable secondary text");
             }catch(Exception e){throw new RuntimeException(e);}
-        });
         designComparison();
         AppWidgetManager manager=AppWidgetManager.getInstance(c);int id=host.allocateAppWidgetId();check(manager.bindAppWidgetIdIfAllowed(id,new ComponentName(c,Widgets.Notes.class)),"Design test uses a native bound widget");JSONObject original=Widgets.defaults("notes");original.put("entity","");Store.config(c,id,original);
         Activity first=startActivitySync(new Intent(c,WidgetConfigActivity.class).putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID,id).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));activities.add(first);waitForIdleSync();ActivityMonitor recreation=addMonitor(WidgetConfigActivity.class.getName(),null,false);
@@ -311,8 +311,9 @@ public class NookSmokeInstrumentation extends Instrumentation {
         host.deleteAppWidgetId(first);host.deleteAppWidgetId(second);Store.removeConfig(c,first);Store.removeConfig(c,second);
     }
     @Override public void onStart() {
+        if(placementOnly){Bundle results=new Bundle();try{InlineVideoSmoke.place(this,getTargetContext(),this::check);results.putString("stream","\nPASS: "+assertions+" checks. Confirm generated widget placement in the emulator launcher.\n");finish(Activity.RESULT_OK,results);}catch(Throwable error){results.putString("stream","FAIL: "+android.util.Log.getStackTraceString(error));finish(Activity.RESULT_CANCELED,results);}return;}
         if(sourceOnly){Bundle results=new Bundle();int code=Activity.RESULT_CANCELED;try{JSONObject feed=FeedData.parseFeed(FeedData.request("https://feeds.bbci.co.uk/news/rss.xml"));int count=feed.getJSONArray("items").length();check(count>0,"Live HTTPS RSS source returns usable stories");results.putString("stream","\nPASS: "+assertions+" checks. Live BBC HTTPS source returned "+count+" usable stories.\n");code=Activity.RESULT_OK;}catch(Throwable e){results.putString("stream","\nFAIL: "+android.util.Log.getStackTraceString(e));}finish(code,results);return;}
-        if(libraryOnly||stockOnly||mediaOnly){Bundle results=new Bundle();AppWidgetHost libraryHost=new AppWidgetHost(getTargetContext(),8818);int code=Activity.RESULT_CANCELED;try{if(mediaOnly)MediaSmoke.run(this,getTargetContext(),libraryHost,this::check);else if(stockOnly)StockSmoke.run(this,getTargetContext(),libraryHost,this::check);else LibrarySmoke.run(this,getTargetContext(),libraryHost,this::check);results.putString("stream","\nPASS: "+assertions+" checks. Device-backed widget library integrations.\n");code=Activity.RESULT_OK;}catch(Throwable e){results.putString("stream","\nFAIL: "+android.util.Log.getStackTraceString(e));}finally{libraryHost.deleteHost();}finish(code,results);return;}
+        if(libraryOnly||stockOnly||mediaOnly||inlineOnly){Bundle results=new Bundle();AppWidgetHost libraryHost=new AppWidgetHost(getTargetContext(),8818);int code=Activity.RESULT_CANCELED;try{if(inlineOnly)InlineVideoSmoke.run(this,getTargetContext(),libraryHost,this::check);else if(mediaOnly)MediaSmoke.run(this,getTargetContext(),libraryHost,this::check);else if(stockOnly)StockSmoke.run(this,getTargetContext(),libraryHost,this::check);else LibrarySmoke.run(this,getTargetContext(),libraryHost,this::check);results.putString("stream","\nPASS: "+assertions+" checks. Device-backed widget library integrations.\n");code=Activity.RESULT_OK;}catch(Throwable e){results.putString("stream","\nFAIL: "+android.util.Log.getStackTraceString(e));}finally{libraryHost.deleteHost();}finish(code,results);return;}
         Bundle result=new Bundle();List<Activity> activities=new ArrayList<>();int resultCode=Activity.RESULT_CANCELED;
         AppWidgetHost host=new AppWidgetHost(getTargetContext(),8818);
         try {
@@ -377,6 +378,7 @@ public class NookSmokeInstrumentation extends Instrumentation {
             LibrarySmoke.run(this,c,host,this::check);
             StockSmoke.run(this,c,host,this::check);
             MediaSmoke.run(this,c,host,this::check);
+            InlineVideoSmoke.run(this,c,host,this::check);
             noteLifecycle(c,host,main,activities);
             for(String kind:Widgets.CATALOG) {
                 Activity config=startActivitySync(new Intent(c,WidgetConfigActivity.class).putExtra("kind",kind).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));activities.add(config);waitForIdleSync();

@@ -190,6 +190,7 @@ public class WidgetConfigActivity extends Activity {
         preview.removeAllViews();
         preview.setBackgroundResource(style==0?0:R.drawable.preview_wallpaper);int inset=Ui.dp(this,style==0?0:14);preview.setPadding(inset,inset,inset,inset);preview.setClipToOutline(true);
         boolean compact=config.optInt("density",0)==1;int preferredWidth=config.optInt("preferredWidth",0),preferredHeight=config.optInt("preferredHeight",0);
+        if(kind.equals("video")){int[] videoSize=VideoWidgets.preferred(this,config);preferredWidth=videoSize[0];preferredHeight=videoSize[1];}
         int previewHeight=config.optInt("preferredHeight",kind.equals("universal")?(compact?280:340):(compact?182:250));
         preview.getLayoutParams().height=Ui.dp(this,previewHeight+(style==0?0:28)); preview.requestLayout();
         JSONObject sample=json(config.toString());try{sample.put("_width",config.optInt("preferredWidth",Math.round(getResources().getDisplayMetrics().widthPixels/getResources().getDisplayMetrics().density)-48)-(style==0?0:28));sample.put("_height",previewHeight);}catch(Exception e){throw new IllegalStateException(e);}
@@ -228,9 +229,10 @@ public class WidgetConfigActivity extends Activity {
         }
     }
     private void save() {
+        if(contentKind.equals("video")&&!MediaData.videos(contentOptions()).isEmpty()&&!MediaData.cached(this,contentOptions()).has("width")){Toast.makeText(this,"Wait for video sizes and posters to finish preparing. Use Refresh if a file could not be read.",Toast.LENGTH_LONG).show();return;}
         put("title",label.getText().toString().trim()); put("kind",kind);
         if(widgetId>0) {
-            Store.config(this,widgetId,config);Widgets.update(this,widgetId,kind);WeatherJob.schedule(this);
+            if(contentKind.equals("video"))InlineVideoState.reset(this,widgetId);Store.config(this,widgetId,config);Widgets.update(this,widgetId,kind);WeatherJob.schedule(this);
             setResult(RESULT_OK,new Intent().putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID,widgetId));finish();return;
         }
         AppWidgetManager manager=AppWidgetManager.getInstance(this);
@@ -244,11 +246,11 @@ public class WidgetConfigActivity extends Activity {
             .setData(android.net.Uri.parse("nook://pin/"+token));
         PendingIntent success=PendingIntent.getBroadcast(this,0,callback,PendingIntent.FLAG_UPDATE_CURRENT|PendingIntent.FLAG_MUTABLE);
         Bundle extras=new Bundle();extras.putParcelable(AppWidgetManager.EXTRA_APPWIDGET_PREVIEW,Widgets.render(this,-1,kind,config,false,true));
-        if(manager.requestPinAppWidget(new ComponentName(this,Widgets.provider(kind)),extras,success)) {
+        if(manager.requestPinAppWidget(new ComponentName(this,kind.equals("video")?VideoWidgets.provider(this,config):Widgets.provider(kind)),extras,success)) {
             Toast.makeText(this,"Confirm placement with your home screen launcher",Toast.LENGTH_LONG).show();finish();
         } else Toast.makeText(this,"Your launcher couldn’t add this widget. Try its Widgets menu.",Toast.LENGTH_LONG).show();
     }
     @Override public void onSaveInstanceState(Bundle out){put("title",label.getText().toString());out.putString("config",config.toString());super.onSaveInstanceState(out);}
     @Override protected void onResume(){super.onResume();if(ready)refreshPreview();}
-    @Override protected void onActivityResult(int request,int result,Intent data){super.onActivityResult(request,result,data);if(request==70||request==71){if(MediaOptions.picked(this,contentOptions(),request,result,data))recreate();return;}if((request>=61&&request<=65)&&result==RESULT_OK&&data!=null&&data.getData()!=null){try{getContentResolver().takePersistableUriPermission(data.getData(),Intent.FLAG_GRANT_READ_URI_PERMISSION);if(request==62)put("glassUri",data.getData().toString());else if(request>=63)putOption("file"+(request-63),data.getData().toString());else putOption("photoUri",data.getData().toString());refreshPreview();}catch(SecurityException e){Toast.makeText(this,"Choose a local photo that allows lasting access",Toast.LENGTH_LONG).show();}}}
+    @Override protected void onActivityResult(int request,int result,Intent data){super.onActivityResult(request,result,data);if(request==70||request==71||request==72){if(MediaOptions.picked(this,contentOptions(),request,result,data))recreate();return;}if((request>=61&&request<=65)&&result==RESULT_OK&&data!=null&&data.getData()!=null){try{getContentResolver().takePersistableUriPermission(data.getData(),Intent.FLAG_GRANT_READ_URI_PERMISSION);if(request==62)put("glassUri",data.getData().toString());else if(request>=63)putOption("file"+(request-63),data.getData().toString());else putOption("photoUri",data.getData().toString());refreshPreview();}catch(SecurityException e){Toast.makeText(this,"Choose a local photo that allows lasting access",Toast.LENGTH_LONG).show();}}}
 }

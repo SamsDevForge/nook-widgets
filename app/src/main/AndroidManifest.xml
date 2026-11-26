@@ -31,6 +31,7 @@
         <activity android:name=".VideoPlayerActivity" android:exported="false" android:supportsPictureInPicture="true" android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout" android:excludeFromRecents="false"/>
         <activity android:name=".ExtraActivity" android:exported="false"/>
         <activity android:name=".WidgetUtilityActivity" android:exported="false" android:theme="@style/Theme.Nook" android:excludeFromRecents="true"/>
+        <service android:name=".InlineVideoService" android:exported="false" android:permission="android.permission.BIND_REMOTEVIEWS"/>
         <service android:name=".MediaListener" android:label="Nook media controls" android:exported="true" android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"><intent-filter><action android:name="android.service.notification.NotificationListenerService"/></intent-filter></service>
         <service android:name=".WeatherJob" android:exported="true" android:permission="android.permission.BIND_JOB_SERVICE"/>
         <receiver android:name=".WeatherRefreshReceiver" android:exported="false"/>
@@ -111,5 +112,7 @@
         <receiver android:name=".Widgets$Animation" android:exported="false" android:label="Nook · Animation"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_animation"/></receiver>
         <receiver android:name=".Widgets$Slideshow" android:exported="false" android:label="Nook · Slideshow"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_slideshow"/></receiver>
         <receiver android:name=".Widgets$Video" android:exported="false" android:label="Nook · Video"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_video"/></receiver>
+        <receiver android:name=".Widgets$VideoPortrait" android:exported="false" android:label="Nook · Video · portrait"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_video_portrait"/></receiver>
+        <receiver android:name=".Widgets$VideoSquare" android:exported="false" android:label="Nook · Video · square"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_video_square"/></receiver>
     </application>
 </manifest>

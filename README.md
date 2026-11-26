@@ -2,11 +2,11 @@
 
 A native Android home screen widget collection with a coordinated, customizable design. Android 9 or newer. No Nook account required; optional weather uses Open-Meteo.
 
-Choose 37 dedicated tools or one Universal widget that switches between them. Apple, macOS, Pixel, Samsung, and Nothing catalogs offer named stock-family counterparts, with classic and Liquid Glass appearances. Version 0.11.0.
+Choose 37 dedicated tools or one Universal widget that switches between them. Apple, macOS, Pixel, Samsung, and Nothing catalogs offer named stock-family counterparts, with classic and Liquid Glass appearances. Version 0.12.0.
 
 **[Download the latest APK](https://github.com/SamsDevForge/nook-widgets/releases/latest/download/Nook.apk)** · [Latest release and checksums](https://github.com/SamsDevForge/nook-widgets/releases/latest) · [Installation](#install) · [Build from source](#build) · [Verification report](dist/verification.md)
 
-Nook includes temporary and permanent notes, reminders, timer/alarm shortcuts, clocks, calendars, weather, personal trackers, animated scenes, photo slideshows and full-length silent video. Use a dedicated widget for one task or switch tools inside Universal. Everything uses native Android widgets and Java, with no third-party runtime libraries, ads, analytics or Nook account.
+Nook includes temporary and permanent notes, reminders, timer/alarm shortcuts, clocks, calendars, weather, personal trackers, redesigned music controls, animated scenes, photo slideshows and full-length silent video. Use a dedicated widget for one task or switch tools inside Universal. Everything uses native Android widgets and Java, with no third-party runtime libraries, ads, analytics or Nook account.
 
 <p>
   <img src="dist/screenshots/animation-homescreen.png" width="220" alt="Animated Liquid Glass widget on the Android home screen" />
@@ -38,7 +38,7 @@ Native Android captures; the photos and video used in media previews are generat
 | Favorite contacts | One or three named favorites; opens the dialer without placing a call |
 | Web search | Google, DuckDuckGo, or Bing; typed or supported voice input |
 | Quick controls | Three editable shortcuts to settings panels, calculator, or camera |
-| Now playing | Active player metadata, artwork when available, and previous/play/pause/next controls |
+| Now playing | Four artwork layouts, preferred player, elapsed time, session-bound controls, and expanded seeking/queue/volume |
 
 Every widget has eight design languages, six palettes (Moss, Ink, Sand, Lilac, Rose, Sky), four surfaces (Solid, Frosted, Smoked, Liquid Glass), spacious and compact layouts, and a custom label. Add multiple copies with independent settings. Resize with your launcher; tap **···** to customize a placed widget.
 
@@ -85,6 +85,29 @@ Selected files are read locally and are never uploaded or modified. The document
 For optional full-resolution playback with audio, a placed widget's Options screen offers **Open saved video in full-screen player**. That player includes seeking, mute/unmute and Android picture-in-picture. Normal widget transport stays inside the widget.
 
 Native tests use generated videos and check visible playback past six seconds, the end and wraparound of a 12-second source, real carousel controls, pause/resume, orientation, aspect providers and Universal integration. [Actual home screen capture](dist/screenshots/inline-video-homescreen.png) · [15-second launcher recording](dist/previews/inline-video-homescreen.mp4) · [Generated 12-second source](dist/previews/inline-proof-source.mp4).
+
+## Music and podcasts
+
+Choose **Now playing** and one of four layouts:
+
+- **Album Card:** artwork, title, artist, album, timeline and large playback controls.
+- **Compact player:** a one-row bar with artwork and controls; Nook offers a dedicated 4×1 provider when adding this layout.
+- **Cover Art:** the album cover fills the card with a shaded backdrop for readable text and controls.
+- **Vinyl:** album art becomes the center label of a native record illustration.
+
+All eight design languages, Liquid Glass, transparency and typography options remain available. Choose square, rounded or circular artwork, artwork-based tinting for solid cards, optional album/player labels, and an artwork-and-controls mode with all text hidden. Smaller spaces adapt to a compact layout.
+
+Open **Music widget options → Connect media access**, then start playback in your music or podcast app. Automatic mode follows a playing session and otherwise the most recent available player. **Choose music or podcast player** pins a particular app to that widget; an inactive preferred app never silently controls another app. Start the app once to make it available in the picker. Each copy, including Universal, keeps its own preference.
+
+The widget shows the player's real MediaSession metadata and album-art bitmap. Controls bind to the displayed session, with a second capability check when tapped. Unavailable controls are dimmed. **Podcast controls** replace Previous/Next with Back 15 seconds / Forward 30 seconds when seeking is supported.
+
+Tap the expand icon or timeline for **Now Playing**: a real seek slider, the queue shared by your player, session volume where absolute volume control is supported, and player-provided custom actions. Queue items can be selected when the player supports queue skipping; otherwise the queue is read-only. Apps may share actions such as Favorite, Shuffle or Repeat; Nook displays the actions actually offered by that session. **Open music app** returns to the source app. Artwork taps can be configured to open Nook or the source app.
+
+At normal playback speed, elapsed time advances through the launcher's native Chronometer; other speeds use the player's reported position updates. The widget's filled timeline refreshes on metadata, playback, seek and queue changes; ordinary position-only callbacks are throttled to 15 seconds. The expanded player's slider updates while that screen is open. There is no repeating background music-widget update loop, and media events refresh only music widgets and Universal copies currently showing music.
+
+Notification-listener access is used for media-session discovery and controls. Nook does not read or store notification messages, stream songs, or download remote artwork. Supported controls, queue data and artwork depend on what your player exposes through Android's MediaSession API.
+
+[Native layout comparison](dist/screenshots/music-layouts.png) · [Widget capture](dist/screenshots/music-widget.png) · [Expanded player](dist/screenshots/music-now-playing.png). Artwork, artist and track names in these captures are generated test examples.
 
 ## Stock-family catalogs
 
@@ -230,7 +253,7 @@ adb -s DEVICE_SERIAL shell am start -n com.nook.widgets/.MainActivity
 
 Replace `DEVICE_SERIAL` with the serial shown by `adb devices`. Selecting a serial is useful when more than one phone is connected. If the device is listed as **unauthorized**, unlock it and accept its debugging prompt. If the phone asks to confirm installation over USB, approve it there.
 
-Package: `com.nook.widgets` · Current version: `0.11.0` · Minimum Android API: `28`.
+Package: `com.nook.widgets` · Current version: `0.12.0` · Minimum Android API: `28`.
 
 ## Reminders and permissions
 
@@ -283,7 +306,7 @@ Widget resources are checked in. `tools/generate-resources.mjs` reproduces the l
 
 ### Validation
 
-Version 0.11.0 passed **19,808 integration checks**, including **40 focused inline-video checks**, on the isolated Android 35 emulator, including actual widget binding, animation, MP4 decoding, playback and picture-in-picture. The previous 0.10.0 release was installed and launched on **OnePlus CPH2717 / Android 16** and **vivo V2222 / Android 15**. The phones were disconnected for 0.11.0, so this release has no new physical-device verification. See the [verification report](dist/verification.md).
+Version 0.12.0 passed **22,459 complete regression checks**, followed by **2,605 focused music checks** on the final APK, using the isolated Android 35 emulator. Tests exercise real framework MediaSessions, native widget controls, seek/volume gestures, queue selection, session binding and permission changes. The previous 0.11.0 video release passed 19,808 complete regression checks. Neither phone is connected for new physical-device verification. See the [verification report](dist/verification.md).
 
 ## Device integration checks
 
@@ -296,11 +319,12 @@ Version 0.11.0 passed **19,808 integration checks**, including **40 focused inli
 ./tools/test.ps1 -LibraryOnly
 ./tools/test.ps1 -MediaOnly
 ./tools/test.ps1 -InlineOnly
+./tools/test.ps1 -MusicOnly
 # Optional live public-feed check (requires internet):
 ./tools/test.ps1 -SourceOnly
 ```
 
-The script targets `emulator-5556` by default and refuses physical phone serials. It installs the app and test APK, grants reminder permissions on that emulator, and checks native rendering, configuration, persistence, transparency, temporary-note recovery, reminders, Universal switching and design controls across the 40 providers (38 tool entries plus two video aspect variants). Device-backed cases exercise battery data, a temporary photo/calendar event and a test media session. Stock checks export the catalog, bind the new providers, exercise real stopwatch/tracker actions, reject unsafe feed documents and verify that selected wallpaper blur/refraction changes rendered pixels. Source-dependent hardware and authenticated account behavior still need testing on a physical phone with your permissions and provider credentials. Media checks create their own sample photos and a valid encoded MP4, test actual attached frame changes and photo fades, check pause/resume/next actions, and verify full and PiP playback. Inline video checks observe actual visible frames through the full source, carousel wraparound, pause/resume, rotated portrait/square media and Universal. Screenshots and native-rendered boards are saved for review.
+The script targets `emulator-5556` by default and refuses physical phone serials. It installs the app and test APK, grants reminder permissions on that emulator, and checks native rendering, configuration, persistence, transparency, temporary-note recovery, reminders, Universal switching and design controls across the 41 providers (38 catalog entries plus two video aspect variants and a one-row music provider). Device-backed cases exercise battery data, a temporary photo/calendar event and a test media session. Stock checks export the catalog, bind the new providers, exercise real stopwatch/tracker actions, reject unsafe feed documents and verify that selected wallpaper blur/refraction changes rendered pixels. Source-dependent hardware and authenticated account behavior still need testing on a physical phone with your permissions and provider credentials. Media checks create their own sample photos and a valid encoded MP4, test actual attached frame changes and photo fades, check pause/resume/next actions, and verify full and PiP playback. Inline video checks observe actual visible frames through the full source, carousel wraparound, pause/resume, rotated portrait/square media and Universal. Screenshots and native-rendered boards are saved for review.
 
 `tools/start-test-emulator.ps1` starts the isolated, hidden `NookTest` AVD when the official emulator and Android 35 x86_64 image have been unpacked under `.tooling/emulator` and `.tooling/system-image`. It uses existing Windows Hypervisor Platform support and writes its AVD files inside this project.
 
@@ -320,5 +344,7 @@ Design references: [Apple widget guidelines and native examples](https://develop
 Library references: [Samsung's widget guide](https://www.samsung.com/us/support/answer/ANS10000945/), [Android calendar provider](https://developer.android.com/identity/providers/calendar-provider), [scoped photo selection](https://developer.android.com/training/data-storage/shared/documents-files), [active media sessions](https://developer.android.com/reference/android/media/session/MediaSessionManager), [Open-Meteo forecast API](https://open-meteo.com/en/docs).
 
 Additional data references: [Android usage statistics](https://developer.android.com/reference/android/app/usage/UsageStatsManager), [Android sensor manager](https://developer.android.com/reference/android/hardware/SensorManager), [Alpha Vantage quote documentation](https://www.alphavantage.co/documentation/).
+
+Music platform references: [MediaController transport controls](https://developer.android.com/reference/android/media/session/MediaController.TransportControls), [PlaybackState capabilities](https://developer.android.com/reference/android/media/session/PlaybackState).
 
 Media platform references: [RemoteViews supported views](https://developer.android.com/reference/android/widget/RemoteViews), [native ViewFlipper](https://developer.android.com/reference/android/widget/ViewFlipper), [video frame retrieval](https://developer.android.com/reference/android/media/MediaMetadataRetriever), [Android picture-in-picture](https://developer.android.com/develop/ui/views/picture-in-picture).

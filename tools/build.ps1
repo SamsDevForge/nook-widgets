@@ -28,7 +28,7 @@ if (-not $SkipResources) { Run-Tool 'node' @('tools/generate-resources.mjs') }
 Run-Tool $aapt @('compile','--dir','app/src/main/res','-o',"$buildRoot/resources.zip")
 $manifestText = [IO.File]::ReadAllText((Join-Path $projectRoot 'app/src/main/AndroidManifest.xml')).Replace('<manifest ', '<manifest package="com.nook.widgets" ').Replace('<application ', '<application android:debuggable="true" ')
 [IO.File]::WriteAllText("$buildRoot/AndroidManifest.xml", $manifestText, [Text.UTF8Encoding]::new($false))
-Run-Tool $aapt @('link','--manifest',"$buildRoot/AndroidManifest.xml",'--min-sdk-version','28','--target-sdk-version','35','--version-code','12','--version-name','0.11.0','--auto-add-overlay','--java',"$buildRoot/generated",'-I',$platform,'-R',"$buildRoot/resources.zip",'-o',"$buildRoot/unsigned.apk")
+Run-Tool $aapt @('link','--manifest',"$buildRoot/AndroidManifest.xml",'--min-sdk-version','28','--target-sdk-version','35','--version-code','13','--version-name','0.12.0','--auto-add-overlay','--java',"$buildRoot/generated",'-I',$platform,'-R',"$buildRoot/resources.zip",'-o',"$buildRoot/unsigned.apk")
 $sourceFiles = @(Get-ChildItem 'app/src/main/java',"$buildRoot/generated" -Recurse -Filter '*.java' | ForEach-Object { $_.FullName })
 # javac argument files avoid command-line limits and preserve workspace paths containing spaces.
 $javacArgs = @('-encoding','UTF-8','-source','17','-target','17','-classpath',$platform,'-d',"$buildRoot/classes") + $sourceFiles

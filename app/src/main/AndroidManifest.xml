@@ -24,6 +24,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".NowPlayingActivity" android:exported="false"/>
         <activity android:name=".WidgetConfigActivity" android:exported="true">
             <intent-filter><action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" /></intent-filter>
         </activity>
@@ -114,5 +115,6 @@
         <receiver android:name=".Widgets$Video" android:exported="false" android:label="Nook · Video"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_video"/></receiver>
         <receiver android:name=".Widgets$VideoPortrait" android:exported="false" android:label="Nook · Video · portrait"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_video_portrait"/></receiver>
         <receiver android:name=".Widgets$VideoSquare" android:exported="false" android:label="Nook · Video · square"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_video_square"/></receiver>
+        <receiver android:name=".Widgets$MusicCompact" android:exported="false" android:label="Nook · Music · compact"><intent-filter><action android:name="android.appwidget.action.APPWIDGET_UPDATE"/></intent-filter><meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_music_compact"/></receiver>
     </application>
 </manifest>

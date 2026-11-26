@@ -18,8 +18,8 @@ import java.util.*;
 public class NookSmokeInstrumentation extends Instrumentation {
     private final List<String[]> created=new ArrayList<>();
     private int assertions;
-    private boolean libraryOnly,stockOnly,sourceOnly,mediaOnly,inlineOnly,placementOnly;
-    @Override public void onCreate(Bundle args){super.onCreate(args);libraryOnly=args!=null&&Boolean.parseBoolean(args.getString("libraryOnly","false"));stockOnly=args!=null&&Boolean.parseBoolean(args.getString("stockOnly","false"));sourceOnly=args!=null&&Boolean.parseBoolean(args.getString("sourceOnly","false"));mediaOnly=args!=null&&Boolean.parseBoolean(args.getString("mediaOnly","false"));inlineOnly=args!=null&&Boolean.parseBoolean(args.getString("inlineOnly","false"));placementOnly=args!=null&&Boolean.parseBoolean(args.getString("placementOnly","false"));start();}
+    private boolean libraryOnly,stockOnly,sourceOnly,mediaOnly,inlineOnly,placementOnly,musicOnly;
+    @Override public void onCreate(Bundle args){super.onCreate(args);libraryOnly=args!=null&&Boolean.parseBoolean(args.getString("libraryOnly","false"));stockOnly=args!=null&&Boolean.parseBoolean(args.getString("stockOnly","false"));sourceOnly=args!=null&&Boolean.parseBoolean(args.getString("sourceOnly","false"));mediaOnly=args!=null&&Boolean.parseBoolean(args.getString("mediaOnly","false"));inlineOnly=args!=null&&Boolean.parseBoolean(args.getString("inlineOnly","false"));musicOnly=args!=null&&Boolean.parseBoolean(args.getString("musicOnly","false"));placementOnly=args!=null&&Boolean.parseBoolean(args.getString("placementOnly","false"));start();}
     private void check(boolean condition,String message){assertions++;if(!condition)throw new AssertionError(message);}
     private Store.Item add(String type,String title,String body) {
         Store.Item i=new Store.Item();i.title=title;i.body=body;Store.save(getTargetContext(),type,i);created.add(new String[]{type,i.id});return i;
@@ -313,7 +313,7 @@ public class NookSmokeInstrumentation extends Instrumentation {
     @Override public void onStart() {
         if(placementOnly){Bundle results=new Bundle();try{InlineVideoSmoke.place(this,getTargetContext(),this::check);results.putString("stream","\nPASS: "+assertions+" checks. Confirm generated widget placement in the emulator launcher.\n");finish(Activity.RESULT_OK,results);}catch(Throwable error){results.putString("stream","FAIL: "+android.util.Log.getStackTraceString(error));finish(Activity.RESULT_CANCELED,results);}return;}
         if(sourceOnly){Bundle results=new Bundle();int code=Activity.RESULT_CANCELED;try{JSONObject feed=FeedData.parseFeed(FeedData.request("https://feeds.bbci.co.uk/news/rss.xml"));int count=feed.getJSONArray("items").length();check(count>0,"Live HTTPS RSS source returns usable stories");results.putString("stream","\nPASS: "+assertions+" checks. Live BBC HTTPS source returned "+count+" usable stories.\n");code=Activity.RESULT_OK;}catch(Throwable e){results.putString("stream","\nFAIL: "+android.util.Log.getStackTraceString(e));}finish(code,results);return;}
-        if(libraryOnly||stockOnly||mediaOnly||inlineOnly){Bundle results=new Bundle();AppWidgetHost libraryHost=new AppWidgetHost(getTargetContext(),8818);int code=Activity.RESULT_CANCELED;try{if(inlineOnly)InlineVideoSmoke.run(this,getTargetContext(),libraryHost,this::check);else if(mediaOnly)MediaSmoke.run(this,getTargetContext(),libraryHost,this::check);else if(stockOnly)StockSmoke.run(this,getTargetContext(),libraryHost,this::check);else LibrarySmoke.run(this,getTargetContext(),libraryHost,this::check);results.putString("stream","\nPASS: "+assertions+" checks. Device-backed widget library integrations.\n");code=Activity.RESULT_OK;}catch(Throwable e){results.putString("stream","\nFAIL: "+android.util.Log.getStackTraceString(e));}finally{libraryHost.deleteHost();}finish(code,results);return;}
+        if(libraryOnly||stockOnly||mediaOnly||inlineOnly||musicOnly){Bundle results=new Bundle();AppWidgetHost libraryHost=new AppWidgetHost(getTargetContext(),8818);int code=Activity.RESULT_CANCELED;try{if(musicOnly)MusicSmoke.run(this,getTargetContext(),libraryHost,this::check);else if(inlineOnly)InlineVideoSmoke.run(this,getTargetContext(),libraryHost,this::check);else if(mediaOnly)MediaSmoke.run(this,getTargetContext(),libraryHost,this::check);else if(stockOnly)StockSmoke.run(this,getTargetContext(),libraryHost,this::check);else LibrarySmoke.run(this,getTargetContext(),libraryHost,this::check);results.putString("stream","\nPASS: "+assertions+" checks. Device-backed widget library integrations.\n");code=Activity.RESULT_OK;}catch(Throwable e){results.putString("stream","\nFAIL: "+android.util.Log.getStackTraceString(e));}finally{libraryHost.deleteHost();}finish(code,results);return;}
         Bundle result=new Bundle();List<Activity> activities=new ArrayList<>();int resultCode=Activity.RESULT_CANCELED;
         AppWidgetHost host=new AppWidgetHost(getTargetContext(),8818);
         try {
@@ -379,6 +379,7 @@ public class NookSmokeInstrumentation extends Instrumentation {
             StockSmoke.run(this,c,host,this::check);
             MediaSmoke.run(this,c,host,this::check);
             InlineVideoSmoke.run(this,c,host,this::check);
+            MusicSmoke.run(this,c,host,this::check);
             noteLifecycle(c,host,main,activities);
             for(String kind:Widgets.CATALOG) {
                 Activity config=startActivitySync(new Intent(c,WidgetConfigActivity.class).putExtra("kind",kind).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));activities.add(config);waitForIdleSync();
@@ -432,7 +433,7 @@ public class NookSmokeInstrumentation extends Instrumentation {
             boolean active=false;for(android.service.notification.StatusBarNotification notification:c.getSystemService(NotificationManager.class).getActiveNotifications())if(reminder.id.equals(notification.getTag()))active=true;
             check(active,"Reminder notification posted");
             Store.toggle(c,"reminders",reminder.id);check(Store.find(c,"reminders",reminder.id).done,"Complete delivered reminder");
-            for(android.service.notification.StatusBarNotification notification:c.getSystemService(NotificationManager.class).getActiveNotifications())check(!reminder.id.equals(notification.getTag()),"Completion cancels notification");
+            long cancelDeadline=SystemClock.elapsedRealtime()+4000;boolean stillPosted;do{stillPosted=false;for(android.service.notification.StatusBarNotification notification:c.getSystemService(NotificationManager.class).getActiveNotifications())if(reminder.id.equals(notification.getTag()))stillPosted=true;if(stillPosted)SystemClock.sleep(50);}while(stillPosted&&SystemClock.elapsedRealtime()<cancelDeadline);check(!stillPosted,"Completion cancels notification");
             result.putString("stream","\nPASS: "+assertions+" checks. Dedicated and Universal widgets; eight design languages, typography, appearance persistence/reset, in-widget navigation, note capture, glass transparency, lifetimes, native bindings, reminders and device-backed library integrations.\n");
             result.putInt("assertions",assertions);
             resultCode=Activity.RESULT_OK;

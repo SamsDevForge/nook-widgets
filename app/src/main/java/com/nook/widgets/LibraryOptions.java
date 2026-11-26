@@ -29,7 +29,7 @@ public final class LibraryOptions {
         }else if(kind.equals("calendar")||kind.equals("agenda")){
             page.addView(Ui.button(a,"Calendar access",Ui.SURFACE,Ui.ACCENT,()->a.startActivity(WidgetUtilityActivity.intent(a,"calendar_access",-1,""))));page.addView(Ui.text(a,"Read-only access shows the events in your phone's visible calendars. The date grid works without permission.",12,Ui.MUTED));if(kind.equals("calendar"))toggle(a,page,"Start weeks on Sunday",settings.optBoolean("sunday",false),on->{put(settings,"sunday",on);refresh.run();});
         }else if(kind.equals("music")){
-            page.addView(Ui.button(a,"Connect media access",Ui.SURFACE,Ui.ACCENT,()->a.startActivity(WidgetUtilityActivity.intent(a,"media_access",-1,""))));page.addView(Ui.text(a,"Android uses notification access to expose active media sessions. Nook uses it for player metadata and playback controls; it does not read or store notification messages.",12,Ui.MUTED));
+            MusicOptions.add(a,page,settings,refresh);
         }else if(kind.equals("worldclock")){
             page.addView(Ui.button(a,"Choose your three time zones",Ui.SURFACE,Ui.ACCENT,()->zones(a,settings,refresh)));toggle(a,page,"Use 24-hour clocks",settings.optBoolean("clock24",true),on->{put(settings,"clock24",on);refresh.run();});
         }else if(kind.equals("countdown")){

@@ -191,6 +191,7 @@ public class WidgetConfigActivity extends Activity {
         preview.setBackgroundResource(style==0?0:R.drawable.preview_wallpaper);int inset=Ui.dp(this,style==0?0:14);preview.setPadding(inset,inset,inset,inset);preview.setClipToOutline(true);
         boolean compact=config.optInt("density",0)==1;int preferredWidth=config.optInt("preferredWidth",0),preferredHeight=config.optInt("preferredHeight",0);
         if(kind.equals("video")){int[] videoSize=VideoWidgets.preferred(this,config);preferredWidth=videoSize[0];preferredHeight=videoSize[1];}
+        if(kind.equals("music")&&config.optInt("variant",0)==1){preferredWidth=320;preferredHeight=100;}
         int previewHeight=config.optInt("preferredHeight",kind.equals("universal")?(compact?280:340):(compact?182:250));
         preview.getLayoutParams().height=Ui.dp(this,previewHeight+(style==0?0:28)); preview.requestLayout();
         JSONObject sample=json(config.toString());try{sample.put("_width",config.optInt("preferredWidth",Math.round(getResources().getDisplayMetrics().widthPixels/getResources().getDisplayMetrics().density)-48)-(style==0?0:28));sample.put("_height",previewHeight);}catch(Exception e){throw new IllegalStateException(e);}
@@ -246,7 +247,7 @@ public class WidgetConfigActivity extends Activity {
             .setData(android.net.Uri.parse("nook://pin/"+token));
         PendingIntent success=PendingIntent.getBroadcast(this,0,callback,PendingIntent.FLAG_UPDATE_CURRENT|PendingIntent.FLAG_MUTABLE);
         Bundle extras=new Bundle();extras.putParcelable(AppWidgetManager.EXTRA_APPWIDGET_PREVIEW,Widgets.render(this,-1,kind,config,false,true));
-        if(manager.requestPinAppWidget(new ComponentName(this,kind.equals("video")?VideoWidgets.provider(this,config):Widgets.provider(kind)),extras,success)) {
+        if(manager.requestPinAppWidget(new ComponentName(this,kind.equals("video")?VideoWidgets.provider(this,config):kind.equals("music")?MusicWidgets.provider(config):Widgets.provider(kind)),extras,success)) {
             Toast.makeText(this,"Confirm placement with your home screen launcher",Toast.LENGTH_LONG).show();finish();
         } else Toast.makeText(this,"Your launcher couldn’t add this widget. Try its Widgets menu.",Toast.LENGTH_LONG).show();
     }

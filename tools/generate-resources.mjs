@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import './generate-dot-font.mjs';
+import './generate-music-resources.mjs';
 const root = new URL('../app/src/main/res/', import.meta.url);
 function write(file, value) { const url = new URL(file, root); fs.mkdirSync(new URL('.', url), {recursive:true}); fs.writeFileSync(url, value.replace(/[ \t]+$/gm, '').trimEnd() + '\n'); }
 const palettes = [
@@ -220,7 +221,7 @@ write('animator/video_instant_in.xml','<objectAnimator xmlns:android="http://sch
 write('animator/video_instant_out.xml','<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android" android:propertyName="alpha" android:valueFrom="0" android:valueTo="0" android:valueType="floatType" android:duration="0"/>');
 for(const [name,w,h,cw,ch] of [['video',250,110,4,2],['video_portrait',130,260,2,3],['video_square',200,200,3,3]])write('xml/widget_'+name+'.xml','<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="'+w+'dp" android:minHeight="'+h+'dp" android:minResizeWidth="96dp" android:minResizeHeight="96dp" android:targetCellWidth="'+cw+'" android:targetCellHeight="'+ch+'" android:resizeMode="horizontal|vertical" android:updatePeriodMillis="1800000" android:initialLayout="@layout/preview_video" android:previewLayout="@layout/preview_video" android:configure="com.nook.widgets.WidgetConfigActivity" android:widgetFeatures="reconfigurable" android:widgetCategory="home_screen" android:description="@string/widget_video_description"/>');
 
-for(const base of ['widget_video_still','widget_video_still_crop','widget_video_live','widget_video_live_slow','widget_video_live_fast','widget_motion','widget_motion_compact','widget','widget_tools','widget_tools_compact','widget_photo','widget_photo_compact','widget_universal','widget_universal_compact','replica_widget','replica_notes','replica_tools','replica_tools_compact','replica_photo','replica_photo_compact','replica_search','replica_music']){
+for(const base of ['widget_music_bar','widget_music_narrow','widget_music_card','widget_music_compact','widget_music_cover','widget_video_still','widget_video_still_crop','widget_video_live','widget_video_live_slow','widget_video_live_fast','widget_motion','widget_motion_compact','widget','widget_tools','widget_tools_compact','widget_photo','widget_photo_compact','widget_universal','widget_universal_compact','replica_widget','replica_notes','replica_tools','replica_tools_compact','replica_photo','replica_photo_compact','replica_search','replica_music']){
   const original=fs.readFileSync(new URL(`layout/${base}.xml`,root),'utf8');
   for(let font=1;font<=4;font++){
     const xml=original.replace(/<(TextView|TextClock|Chronometer)\b[^>]*\/>/g,tag=>{

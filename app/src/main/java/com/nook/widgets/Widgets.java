@@ -73,6 +73,7 @@ public final class Widgets {
         return new Class<?>[]{Notes.class,Reminders.class,Timers.class,Alarms.class,Checklist.class,Habits.class,Clock.class,Battery.class,Calendar.class,Agenda.class,Weather.class,Photos.class,WorldClock.class,Countdown.class,Contacts.class,Search.class,Controls.class,Music.class}[index(kind)];
     }
     public static String kindOf(ComponentName provider) {
+        if(provider!=null&&provider.getClassName().equals(MusicCompact.class.getName()))return "music";
         if(provider.getClassName().equals(VideoPortrait.class.getName())||provider.getClassName().equals(VideoSquare.class.getName()))return "video";
         for (String k : CATALOG) if (provider(k).getName().equals(provider.getClassName())) return k;
         return "notes";
@@ -83,7 +84,7 @@ public final class Widgets {
         catch (org.json.JSONException e) { throw new IllegalStateException(e); }
         return j;
     }
-    public static Class<?>[] providers(String kind){return kind.equals("video")?new Class<?>[]{Video.class,VideoPortrait.class,VideoSquare.class}:new Class<?>[]{provider(kind)};}
+    public static Class<?>[] providers(String kind){return kind.equals("video")?new Class<?>[]{Video.class,VideoPortrait.class,VideoSquare.class}:kind.equals("music")?new Class<?>[]{Music.class,MusicCompact.class}:new Class<?>[]{provider(kind)};}
     public static void updateAll(Context c) {
         AppWidgetManager m = AppWidgetManager.getInstance(c);
         for (String kind : CATALOG) for(Class<?> type:providers(kind))for (int id : m.getAppWidgetIds(new ComponentName(c,type))) update(c,id,kind);
@@ -101,6 +102,7 @@ public final class Widgets {
         if(preview){try{config=new JSONObject(config.toString()).put("_preview",true);}catch(Exception e){throw new IllegalStateException(e);}}
         if(kind.equals("universal"))return UniversalWidget.render(c,id,config,small,preview);
         if(kind.equals("clock")&&config.optBoolean("quickLook",false))return QuickLookWidget.render(c,id,config,small,preview);
+        if(kind.equals("music"))return MusicWidgets.render(c,id,config,small,preview);
         if(kind.equals("video"))return VideoWidgets.render(c,id,config,small,preview);
         if(MediaWidgets.supports(kind))return MediaWidgets.render(c,id,kind,config,small,preview);
         if(ExtraKinds.index(kind)>=0)return ExtraWidgets.render(c,id,kind,config,small,preview);
@@ -318,6 +320,7 @@ public final class Widgets {
     public static class Animation extends Base{protected String kind(){return "animation";}}
     public static class Slideshow extends Base{protected String kind(){return "slideshow";}}
     public static class Video extends Base{protected String kind(){return "video";}}
+    public static class MusicCompact extends Base{protected String kind(){return "music";}}
     public static class VideoPortrait extends Base{protected String kind(){return "video";}}
     public static class VideoSquare extends Base{protected String kind(){return "video";}}
 }

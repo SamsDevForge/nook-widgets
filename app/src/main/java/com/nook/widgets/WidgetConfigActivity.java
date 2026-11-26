@@ -27,6 +27,8 @@ public class WidgetConfigActivity extends Activity {
     private final List<TextView> paletteDots = new ArrayList<>();
     private boolean ready;
     private AlertDialog appearance;
+    private boolean budsListening;
+    private final BroadcastReceiver budsChanges=new BroadcastReceiver(){@Override public void onReceive(Context c,Intent i){if(ready)refreshPreview();}};
     @Override public void onCreate(Bundle saved) {
         super.onCreate(saved);
         setResult(RESULT_CANCELED);
@@ -113,10 +115,11 @@ public class WidgetConfigActivity extends Activity {
             case "alarms" -> new String[]{"Morning · 07:00 / 07:30 / 08:00","Early start · 06:00 / 06:30 / 07:00","Slow morning · 08:00 / 08:30 / 09:00"};
             case "checklist" -> new String[]{"Only unfinished tasks","All tasks"};
             case "habits" -> new String[]{"Progress bar & counter","Simple counter"};
+            case "buds" -> BudsWidgets.variants();
             default -> MediaWidgets.supports(contentKind)?MediaWidgets.variants(contentKind):ExtraKinds.index(contentKind)>=0?(contentKind.equals("breathing")?new String[]{"Box rhythm","4–7–8 rhythm","Steady rhythm"}:new String[]{"Detailed","Summary"}):contentKind.equals("clock")?new String[]{"12-hour clock","24-hour clock"}:LibraryWidgets.variants(contentKind);
         };
         spinner(variants,settings.optInt("variant",0),n->{
-            if(settings.optInt("variant",0)!=n){putOption("variant",n);for(int k=0;k<3;k++){settings.remove("value"+k);if(contentKind.equals("controls"))settings.remove("control"+k);}}
+            if(settings.optInt("variant",0)!=n){putOption("variant",n);if(contentKind.equals("buds")&&n==1)put("style",3);for(int k=0;k<3;k++){settings.remove("value"+k);if(contentKind.equals("controls"))settings.remove("control"+k);}}
             refreshPreview();
         });
         if(MediaWidgets.supports(contentKind))MediaOptions.add(this,page,contentKind,settings,this::refreshPreview,(request,intent)->startActivityForResult(intent,request));
@@ -252,6 +255,8 @@ public class WidgetConfigActivity extends Activity {
         } else Toast.makeText(this,"Your launcher couldn’t add this widget. Try its Widgets menu.",Toast.LENGTH_LONG).show();
     }
     @Override public void onSaveInstanceState(Bundle out){put("title",label.getText().toString());out.putString("config",config.toString());super.onSaveInstanceState(out);}
-    @Override protected void onResume(){super.onResume();if(ready)refreshPreview();}
+    @Override public void onRequestPermissionsResult(int request,String[] permissions,int[] results){super.onRequestPermissionsResult(request,permissions,results);if(request==84){BudsData.refresh(this);refreshPreview();}}
+    @Override protected void onPause(){if(budsListening){unregisterReceiver(budsChanges);budsListening=false;}super.onPause();}
+    @Override protected void onResume(){super.onResume();if(contentKind!=null&&contentKind.equals("buds")){IntentFilter filter=new IntentFilter("com.nook.widgets.BUDS_REFRESH");if(android.os.Build.VERSION.SDK_INT>=33)registerReceiver(budsChanges,filter,Context.RECEIVER_NOT_EXPORTED);else registerReceiver(budsChanges,filter);budsListening=true;BudsData.refresh(this);}if(ready)refreshPreview();}
     @Override protected void onActivityResult(int request,int result,Intent data){super.onActivityResult(request,result,data);if(request==70||request==71||request==72){if(MediaOptions.picked(this,contentOptions(),request,result,data))recreate();return;}if((request>=61&&request<=65)&&result==RESULT_OK&&data!=null&&data.getData()!=null){try{getContentResolver().takePersistableUriPermission(data.getData(),Intent.FLAG_GRANT_READ_URI_PERMISSION);if(request==62)put("glassUri",data.getData().toString());else if(request>=63)putOption("file"+(request-63),data.getData().toString());else putOption("photoUri",data.getData().toString());refreshPreview();}catch(SecurityException e){Toast.makeText(this,"Choose a local photo that allows lasting access",Toast.LENGTH_LONG).show();}}}
 }

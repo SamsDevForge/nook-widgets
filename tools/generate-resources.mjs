@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import './generate-dot-font.mjs';
 import './generate-music-resources.mjs';
+import './generate-creative-resources.mjs';
 const root = new URL('../app/src/main/res/', import.meta.url);
 function write(file, value) { const url = new URL(file, root); fs.mkdirSync(new URL('.', url), {recursive:true}); fs.writeFileSync(url, value.replace(/[ \t]+$/gm, '').trimEnd() + '\n'); }
 const palettes = [
@@ -56,11 +57,12 @@ search:'M10,3 A7,7 0,1 0,10.01,3 M15,15 L22,22',
 controls:'M3,7 L21,7 M8,3 L8,11 M3,17 L21,17 M16,13 L16,21',
 music:'M9,17 L9,4 L21,2 L21,15 M9,8 L21,6 M9,17 C3,13 1,20 5,21 C9,22 9,18 9,17 M21,15 C15,11 13,18 17,19 C21,20 21,16 21,15'
 };
-const stockTitles={"stopwatch":"Stopwatch","compass":"Compass","recorder":"Voice memos","screentime":"Screen time","devicecare":"Device care","tracker":"Personal trackers","files":"Files","bookmarks":"Bookmarks","shortcuts":"App shortcuts","maps":"Saved places","translate":"Translate","breathing":"Breathing","news":"Headlines","stocks":"Market watchlist","service":"Connected app cards","tips":"Daily tips","animation":"Animated scenes","slideshow":"Photo slideshow","video":"Video carousel"};
+const stockTitles={"stopwatch":"Stopwatch","compass":"Compass","recorder":"Voice memos","screentime":"Screen time","devicecare":"Device care","tracker":"Personal trackers","files":"Files","bookmarks":"Bookmarks","shortcuts":"App shortcuts","maps":"Saved places","translate":"Translate","breathing":"Breathing","news":"Headlines","stocks":"Market watchlist","service":"Connected app cards","tips":"Daily tips","animation":"Animated scenes","slideshow":"Photo slideshow","video":"Video carousel","buds":"Earbuds"};
 const stockAliases={"stopwatch":"timers","compass":"worldclock","recorder":"music","screentime":"clock","devicecare":"battery","tracker":"habits","files":"notes","bookmarks":"notes","shortcuts":"universal","maps":"worldclock","translate":"search","breathing":"habits","news":"notes","stocks":"habits","service":"controls","tips":"notes","animation":"habits","slideshow":"photos","video":"music"};
 for(const [key,source] of Object.entries(stockAliases))paths[key]=paths[source];
 paths.animation='M12,4 A8,8 0,1 0,20,12 M8,8 C3,13 12,21 17,16 C22,11 13,3 8,8 M12,10 A2,2 0,1 0,12.01,10';
 paths.slideshow='M3,7 L19,7 L19,22 L3,22 Z M7,3 L23,3 L23,18 M4,19 L9,13 L13,17 L16,13 L19,17';
+paths.buds='M4,12 V9 A8,8 0,0 1,20,9 V12 M4,10 H7 V18 H4 Z M17,10 H20 V18 H17 Z';
 paths.video='M3,5 L21,5 L21,20 L3,20 Z M10,9 L16,12.5 L10,16 Z';
 for (const [name,path] of Object.entries(paths)) {
   const quick = ['timers','alarms','search','controls'].includes(name);
@@ -221,7 +223,7 @@ write('animator/video_instant_in.xml','<objectAnimator xmlns:android="http://sch
 write('animator/video_instant_out.xml','<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android" android:propertyName="alpha" android:valueFrom="0" android:valueTo="0" android:valueType="floatType" android:duration="0"/>');
 for(const [name,w,h,cw,ch] of [['video',250,110,4,2],['video_portrait',130,260,2,3],['video_square',200,200,3,3]])write('xml/widget_'+name+'.xml','<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android" android:minWidth="'+w+'dp" android:minHeight="'+h+'dp" android:minResizeWidth="96dp" android:minResizeHeight="96dp" android:targetCellWidth="'+cw+'" android:targetCellHeight="'+ch+'" android:resizeMode="horizontal|vertical" android:updatePeriodMillis="1800000" android:initialLayout="@layout/preview_video" android:previewLayout="@layout/preview_video" android:configure="com.nook.widgets.WidgetConfigActivity" android:widgetFeatures="reconfigurable" android:widgetCategory="home_screen" android:description="@string/widget_video_description"/>');
 
-for(const base of ['widget_music_bar','widget_music_narrow','widget_music_card','widget_music_compact','widget_music_cover','widget_video_still','widget_video_still_crop','widget_video_live','widget_video_live_slow','widget_video_live_fast','widget_motion','widget_motion_compact','widget','widget_tools','widget_tools_compact','widget_photo','widget_photo_compact','widget_universal','widget_universal_compact','replica_widget','replica_notes','replica_tools','replica_tools_compact','replica_photo','replica_photo_compact','replica_search','replica_music']){
+for(const base of ['widget_buds','creative_music','creative_music_orbit','widget_music_bar','widget_music_narrow','widget_music_card','widget_music_compact','widget_music_cover','widget_video_still','widget_video_still_crop','widget_video_live','widget_video_live_slow','widget_video_live_fast','widget_motion','widget_motion_compact','widget','widget_tools','widget_tools_compact','widget_photo','widget_photo_compact','widget_universal','widget_universal_compact','replica_widget','replica_notes','replica_tools','replica_tools_compact','replica_photo','replica_photo_compact','replica_search','replica_music']){
   const original=fs.readFileSync(new URL(`layout/${base}.xml`,root),'utf8');
   for(let font=1;font<=4;font++){
     const xml=original.replace(/<(TextView|TextClock|Chronometer)\b[^>]*\/>/g,tag=>{

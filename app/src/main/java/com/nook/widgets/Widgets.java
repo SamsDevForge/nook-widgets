@@ -69,7 +69,7 @@ public final class Widgets {
     public static int defaultPalette(String kind){return kind.equals("universal")?0:ExtraKinds.index(kind)>=0?ExtraKinds.index(kind)%6:new int[]{2,3,0,1,5,4,0,0,3,5,5,2,1,4,4,2,1,3}[index(kind)];}
     public static Class<?> provider(String kind) {
         if(kind.equals("universal"))return Universal.class;
-        if(ExtraKinds.index(kind)>=0)return new Class<?>[]{Stopwatch.class,Compass.class,Recorder.class,ScreenTime.class,DeviceCare.class,Tracker.class,Files.class,Bookmarks.class,Shortcuts.class,Maps.class,Translate.class,Breathing.class,News.class,Stocks.class,Service.class,Tips.class,Animation.class,Slideshow.class,Video.class}[ExtraKinds.index(kind)];
+        if(ExtraKinds.index(kind)>=0)return new Class<?>[]{Stopwatch.class,Compass.class,Recorder.class,ScreenTime.class,DeviceCare.class,Tracker.class,Files.class,Bookmarks.class,Shortcuts.class,Maps.class,Translate.class,Breathing.class,News.class,Stocks.class,Service.class,Tips.class,Animation.class,Slideshow.class,Video.class,Buds.class}[ExtraKinds.index(kind)];
         return new Class<?>[]{Notes.class,Reminders.class,Timers.class,Alarms.class,Checklist.class,Habits.class,Clock.class,Battery.class,Calendar.class,Agenda.class,Weather.class,Photos.class,WorldClock.class,Countdown.class,Contacts.class,Search.class,Controls.class,Music.class}[index(kind)];
     }
     public static String kindOf(ComponentName provider) {
@@ -103,6 +103,7 @@ public final class Widgets {
         if(kind.equals("universal"))return UniversalWidget.render(c,id,config,small,preview);
         if(kind.equals("clock")&&config.optBoolean("quickLook",false))return QuickLookWidget.render(c,id,config,small,preview);
         if(kind.equals("music"))return MusicWidgets.render(c,id,config,small,preview);
+        if(kind.equals("buds"))return BudsWidgets.render(c,id,config,small,preview);
         if(kind.equals("video"))return VideoWidgets.render(c,id,config,small,preview);
         if(MediaWidgets.supports(kind))return MediaWidgets.render(c,id,kind,config,small,preview);
         if(ExtraKinds.index(kind)>=0)return ExtraWidgets.render(c,id,kind,config,small,preview);
@@ -319,6 +320,7 @@ public final class Widgets {
     public static class Tips extends Base{protected String kind(){return "tips";}}
     public static class Animation extends Base{protected String kind(){return "animation";}}
     public static class Slideshow extends Base{protected String kind(){return "slideshow";}}
+    public static class Buds extends Base{protected String kind(){return "buds";}}
     public static class Video extends Base{protected String kind(){return "video";}}
     public static class MusicCompact extends Base{protected String kind(){return "music";}}
     public static class VideoPortrait extends Base{protected String kind(){return "video";}}

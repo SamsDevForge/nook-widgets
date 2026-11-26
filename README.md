@@ -2,7 +2,7 @@
 
 A native Android home screen widget collection with a coordinated, customizable design. Android 9 or newer. No Nook account required; optional weather uses Open-Meteo.
 
-Choose 37 dedicated tools or one Universal widget that switches between them. Apple, macOS, Pixel, Samsung, and Nothing catalogs offer named stock-family counterparts, with classic and Liquid Glass appearances. Version 0.12.0.
+Choose 38 dedicated tools or one Universal widget that switches between them. Apple, macOS, Pixel, Samsung, and Nothing catalogs offer named stock-family counterparts, with classic and Liquid Glass appearances. Version 0.13.0.
 
 **[Download the latest APK](https://github.com/SamsDevForge/nook-widgets/releases/latest/download/Nook.apk)** · [Latest release and checksums](https://github.com/SamsDevForge/nook-widgets/releases/latest) · [Installation](#install) · [Build from source](#build) · [Verification report](dist/verification.md)
 
@@ -20,7 +20,7 @@ Native Android captures; the photos and video used in media previews are generat
 
 | Widget | Options |
 | --- | --- |
-| Universal widget | Seven pages of up to six tools; switch between all 37 views inside one home screen slot |
+| Universal widget | Seven pages of up to six tools; switch between all 38 views inside one home screen slot |
 | Quick notes | Permanent or temporary notes; countdown or chosen expiry time; pin one note or show recent active notes |
 | Gentle reminders | All upcoming reminders or those due today, including overdue; tap a row to complete it |
 | Quick timers | Everyday, Focus, and Kitchen presets; three custom durations from 1 to 1440 minutes |
@@ -38,7 +38,7 @@ Native Android captures; the photos and video used in media previews are generat
 | Favorite contacts | One or three named favorites; opens the dialer without placing a call |
 | Web search | Google, DuckDuckGo, or Bing; typed or supported voice input |
 | Quick controls | Three editable shortcuts to settings panels, calculator, or camera |
-| Now playing | Four artwork layouts, preferred player, elapsed time, session-bound controls, and expanded seeking/queue/volume |
+| Now playing | Eleven creative and artwork layouts, preferred player, elapsed time, session-bound controls, and expanded seeking/queue/volume |
 
 Every widget has eight design languages, six palettes (Moss, Ink, Sand, Lilac, Rose, Sky), four surfaces (Solid, Frosted, Smoked, Liquid Glass), spacious and compact layouts, and a custom label. Add multiple copies with independent settings. Resize with your launcher; tap **···** to customize a placed widget.
 
@@ -46,6 +46,7 @@ The additional dedicated tools are:
 
 | Widget | Data and actions |
 | --- | --- |
+| Earbuds | Dark Stage, Glass Gauge and Minimal Pods; paired-device connection, best-effort combined battery and labeled manual readings |
 | Stopwatch | Native live chronometer; start, pause, resume, lap and reset |
 | Compass | Foreground magnetic sensor reading; widget retains the last measurement |
 | Voice memos | Microphone permission at use; private capture and playback; stops on leaving the recorder |
@@ -88,12 +89,26 @@ Native tests use generated videos and check visible playback past six seconds, t
 
 ## Music and podcasts
 
-Choose **Now playing** and one of four layouts:
+Choose **Now playing** and one of eleven layouts:
 
 - **Album Card:** artwork, title, artist, album, timeline and large playback controls.
 - **Compact player:** a one-row bar with artwork and controls; Nook offers a dedicated 4×1 provider when adding this layout.
 - **Cover Art:** the album cover fills the card with a shaded backdrop for readable text and controls.
 - **Vinyl:** album art becomes the center label of a native record illustration.
+
+The creative collection adds seven original objects inspired by physical media, sculpted controls and the supplied mood boards:
+
+| Player | Look |
+| --- | --- |
+| Cassette Deck | Warm textured tape housing, twin reels and a printed label |
+| Orbit Disc | Cherry-red stage, oversized album disc, progress arc and a vertical transport rail in taller cards |
+| Cover Stack | Fanned cover cards, with the current track in front and shared queue artwork behind |
+| Bubble Lab | Green sculpted spheres showing the player's reported output-volume snapshot |
+| Soft Sculpt | A raised album medallion and soft-shadow buttons |
+| Paper Cut | Taped Polaroid artwork on warm paper with serif typography |
+| Pixel Arcade | A neon cartridge frame and square controls |
+
+Open **Explore creative players** in Music options or use the normal layout selector. Choose collection, follow-design, midnight, warm-paper, cherry-red or album-glow moods; adjust object depth and texture. The reels and arcade slots are decorative. Cover Stack is a visual composition; use Previous/Next or the expanded queue for track selection. Bubble Lab is a reported-volume snapshot, not an audio visualizer. Creative objects use their own artwork shapes. Hide all text also removes lettering drawn on these objects. Narrow or short slots adapt to the standard compact player.
 
 All eight design languages, Liquid Glass, transparency and typography options remain available. Choose square, rounded or circular artwork, artwork-based tinting for solid cards, optional album/player labels, and an artwork-and-controls mode with all text hidden. Smaller spaces adapt to a compact layout.
 
@@ -108,6 +123,18 @@ At normal playback speed, elapsed time advances through the launcher's native Ch
 Notification-listener access is used for media-session discovery and controls. Nook does not read or store notification messages, stream songs, or download remote artwork. Supported controls, queue data and artwork depend on what your player exposes through Android's MediaSession API.
 
 [Native layout comparison](dist/screenshots/music-layouts.png) · [Widget capture](dist/screenshots/music-widget.png) · [Expanded player](dist/screenshots/music-now-playing.png). Artwork, artist and track names in these captures are generated test examples.
+
+## Earbuds widget
+
+Choose **Earbuds** as a dedicated widget or inside Universal, then select **Dark Stage**, **Glass Gauge** or **Minimal Pods**. The original earpiece drawing, green arcs and central battery gauge draw on the supplied buds reference. Glass Gauge starts with Liquid Glass; appearance settings and transparency still apply.
+
+In widget options, choose a paired device. Android 12+ asks for **Nearby devices** access. Nook reads paired devices and public A2DP, headset and (Android 13+) LE Audio connection profiles. It does not scan, ask for location, pair automatically, or access a vendor account. Pair or reconnect using the Bluetooth settings button. Connection callbacks update the widget and open preview.
+
+Battery support is **best effort**: some Android Bluetooth stacks broadcast a combined battery report; there is no guaranteed public cross-manufacturer battery query in this build. Nook listens passively to the Android battery action from privileged Bluetooth senders. Reports show their last-reported time and expire after 24 hours. Combined reports are mirrored around the two earpieces, with separate L/R values left as “—”. They never become fabricated left/right/case readings or the phone's battery percentage.
+
+Enable **manual readings** to enter combined, left, right and case values from 0–100. Leave unavailable fields blank. Manual mode stays visibly labeled, including when titles are hidden, and readings older than 24 hours are marked. Manual values do not imply a Bluetooth connection. Unsupported devices show unavailable data. Actual earbuds and manufacturer-specific reporting still require physical-device testing.
+
+[Creative players and buds preview](dist/screenshots/creative-players-buds.png). These are actual native renders with generated track art and clearly labeled manual sample batteries; the artwork from the reference screenshots is not bundled.
 
 ## Stock-family catalogs
 
@@ -185,7 +212,7 @@ The app has a Today dashboard, a gallery with native widget previews, and a Libr
 
 In **Widgets**, choose **Dedicated** for a single-purpose widget or **Universal** for the switchable toolbox. Both can be added from the app or the launcher's widget picker.
 
-The Universal widget starts with an **All tools** picker. Its **Previous/Next** controls page through seven groups of up to six tools. Tap a tool to use it inside the same widget; Previous/Next then cycle through all 37 tool views. **All tools** returns to the picker near the current tool. Larger layouts also show Library, Customize, and More tools tiles. Switching views does not launch the app. Editors, system settings, photo selection, and external actions open their relevant screens.
+The Universal widget starts with an **All tools** picker. Its **Previous/Next** controls page through seven groups of up to six tools. Tap a tool to use it inside the same widget; Previous/Next then cycle through all 38 tool views. **All tools** returns to the picker near the current tool. Larger layouts also show Library, Customize, and More tools tiles. Switching views does not launch the app. Editors, system settings, photo selection, and external actions open their relevant screens.
 
 Each copy remembers its own current view. Colors, surface, transparency, and layout apply across its views. Note selection, timer/alarm shortcuts, clock format, and other tool options are saved separately per view. Tap **···**, select the displayed view, and change that view's options. Canceling configuration leaves the placed widget unchanged.
 
@@ -253,13 +280,13 @@ adb -s DEVICE_SERIAL shell am start -n com.nook.widgets/.MainActivity
 
 Replace `DEVICE_SERIAL` with the serial shown by `adb devices`. Selecting a serial is useful when more than one phone is connected. If the device is listed as **unauthorized**, unlock it and accept its debugging prompt. If the phone asks to confirm installation over USB, approve it there.
 
-Package: `com.nook.widgets` · Current version: `0.12.0` · Minimum Android API: `28`.
+Package: `com.nook.widgets` · Current version: `0.13.0` · Minimum Android API: `28`.
 
 ## Reminders and permissions
 
 When saving your first reminder, allow notifications. **Settings → Reminder permissions** also exposes notification and precise timing settings. Without notification permission, reminders remain visible in the app and widgets but cannot alert you. Without precise timing access, Android may deliver reminders later than requested. Pending reminders are restored after reboot, app update, clock/time-zone changes, and permission setup. Opening the app also restores pending reminders and catches up alerts that became overdue while notifications were blocked.
 
-Notes, lists, habits, phone battery, clocks, countdowns, and calendar dates work without these optional data connections. Nook has no analytics, ads, login, location permission, or cloud backup. Internet access is used for optional weather, your selected RSS feed and your authenticated quote provider; submitted web searches open your chosen provider. Calendar, media, usage statistics and microphone access are separate, optional setup steps. Files and wallpaper images use individual document grants. Translation text is sent to Google only after you choose Translate; Maps receives the saved destination when you open directions. Selected photos and phone calendars remain with their existing providers. Uninstalling clears Nook's notes, routines, configuration, and access grants, including private voice memos, without deleting external photos, files or calendar events. Nook data export/sync and recurring reminders are not included.
+Notes, lists, habits, phone battery, clocks, countdowns, and calendar dates work without these optional data connections. Nook has no analytics, ads, login, location permission, or cloud backup. Internet access is used for optional weather, your selected RSS feed and your authenticated quote provider; submitted web searches open your chosen provider. Bluetooth connection, calendar, media, usage statistics and microphone access are separate, optional setup steps. Files and wallpaper images use individual document grants. Translation text is sent to Google only after you choose Translate; Maps receives the saved destination when you open directions. Selected photos and phone calendars remain with their existing providers. Uninstalling clears Nook's notes, routines, configuration, and access grants, including private voice memos, without deleting external photos, files or calendar events. Nook data export/sync and recurring reminders are not included.
 
 ## Build
 
@@ -306,7 +333,7 @@ Widget resources are checked in. `tools/generate-resources.mjs` reproduces the l
 
 ### Validation
 
-Version 0.12.0 passed **22,459 complete regression checks**, followed by **2,605 focused music checks** on the final APK, using the isolated Android 35 emulator. Tests exercise real framework MediaSessions, native widget controls, seek/volume gestures, queue selection, session binding and permission changes. The previous 0.11.0 video release passed 19,808 complete regression checks. Neither phone is connected for new physical-device verification. See the [verification report](dist/verification.md).
+Version 0.13.0 passed **23,821 complete regression checks**, followed by **3,337 focused music, creative-player and earbuds checks** on the final APK. The final run covers the volume-only callback, compact buds readability and the last compatibility changes. Tests use real framework MediaSessions, native widget controls, seek/volume gestures, queue selection, session binding and permission states on an isolated Android 35 emulator. Neither physical phone nor real earbuds were connected for this release. See the [verification report](dist/verification.md).
 
 ## Device integration checks
 
@@ -320,11 +347,12 @@ Version 0.12.0 passed **22,459 complete regression checks**, followed by **2,605
 ./tools/test.ps1 -MediaOnly
 ./tools/test.ps1 -InlineOnly
 ./tools/test.ps1 -MusicOnly
+./tools/test.ps1 -CreativeOnly
 # Optional live public-feed check (requires internet):
 ./tools/test.ps1 -SourceOnly
 ```
 
-The script targets `emulator-5556` by default and refuses physical phone serials. It installs the app and test APK, grants reminder permissions on that emulator, and checks native rendering, configuration, persistence, transparency, temporary-note recovery, reminders, Universal switching and design controls across the 41 providers (38 catalog entries plus two video aspect variants and a one-row music provider). Device-backed cases exercise battery data, a temporary photo/calendar event and a test media session. Stock checks export the catalog, bind the new providers, exercise real stopwatch/tracker actions, reject unsafe feed documents and verify that selected wallpaper blur/refraction changes rendered pixels. Source-dependent hardware and authenticated account behavior still need testing on a physical phone with your permissions and provider credentials. Media checks create their own sample photos and a valid encoded MP4, test actual attached frame changes and photo fades, check pause/resume/next actions, and verify full and PiP playback. Inline video checks observe actual visible frames through the full source, carousel wraparound, pause/resume, rotated portrait/square media and Universal. Screenshots and native-rendered boards are saved for review.
+The script targets `emulator-5556` by default and refuses physical phone serials. It installs the app and test APK, grants reminder permissions on that emulator, and checks native rendering, configuration, persistence, transparency, temporary-note recovery, reminders, Universal switching and design controls across the 42 providers (39 catalog entries plus two video aspect variants and a one-row music provider). Device-backed cases exercise battery data, a temporary photo/calendar event and a test media session. Stock checks export the catalog, bind the new providers, exercise real stopwatch/tracker actions, reject unsafe feed documents and verify that selected wallpaper blur/refraction changes rendered pixels. Source-dependent hardware and authenticated account behavior still need testing on a physical phone with your permissions and provider credentials. Media checks create their own sample photos and a valid encoded MP4, test actual attached frame changes and photo fades, check pause/resume/next actions, and verify full and PiP playback. Inline video checks observe actual visible frames through the full source, carousel wraparound, pause/resume, rotated portrait/square media and Universal. Screenshots and native-rendered boards are saved for review.
 
 `tools/start-test-emulator.ps1` starts the isolated, hidden `NookTest` AVD when the official emulator and Android 35 x86_64 image have been unpacked under `.tooling/emulator` and `.tooling/system-image`. It uses existing Windows Hypervisor Platform support and writes its AVD files inside this project.
 
@@ -348,3 +376,5 @@ Additional data references: [Android usage statistics](https://developer.android
 Music platform references: [MediaController transport controls](https://developer.android.com/reference/android/media/session/MediaController.TransportControls), [PlaybackState capabilities](https://developer.android.com/reference/android/media/session/PlaybackState).
 
 Media platform references: [RemoteViews supported views](https://developer.android.com/reference/android/widget/RemoteViews), [native ViewFlipper](https://developer.android.com/reference/android/widget/ViewFlipper), [video frame retrieval](https://developer.android.com/reference/android/media/MediaMetadataRetriever), [Android picture-in-picture](https://developer.android.com/develop/ui/views/picture-in-picture).
+
+Earbuds platform references: [Bluetooth permissions](https://developer.android.com/develop/connectivity/bluetooth/bt-permissions), [Bluetooth profiles](https://developer.android.com/reference/android/bluetooth/BluetoothProfile), [LE Audio](https://developer.android.com/reference/android/bluetooth/BluetoothLeAudio), [AOSP battery broadcast (hidden API)](https://github.com/aosp-mirror/platform_frameworks_base/blob/android11-release/core/java/android/bluetooth/BluetoothDevice.java).

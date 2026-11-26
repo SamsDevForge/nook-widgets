@@ -25,6 +25,7 @@ public final class MediaListener extends NotificationListenerService {
             public void onMetadataChanged(MediaMetadata metadata){refresh();}
             public void onPlaybackStateChanged(PlaybackState state){boolean changed=!key(state).equals(key(previous))||state!=null&&Math.abs(state.getPosition()-MediaAccess.position(previous,0))>2000;previous=state;refresh(changed);}
             public void onQueueChanged(List<MediaSession.QueueItem> queue){refresh();}
+            public void onAudioInfoChanged(MediaController.PlaybackInfo info){refresh();}
             public void onSessionDestroyed(){refresh();}
         };controllers.put(player,callback);player.registerCallback(callback,handler);}
     }

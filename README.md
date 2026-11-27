@@ -1,12 +1,12 @@
 # Nook
 
-A native Android home screen widget collection with a coordinated, customizable design. Android 9 or newer. No Nook account required; optional weather uses Open-Meteo.
+Nook brings **38 customizable widgets** to your Android home screen, from quick notes, reminders, clocks, and calendars to music controls, photo slideshows, and silent inline video. Add a dedicated widget or use Universal to switch tools in one home screen slot.
 
-Choose 38 dedicated tools or one Universal widget that switches between them. Apple, macOS, Pixel, Samsung, and Nothing catalogs offer named stock-family counterparts, with classic and Liquid Glass appearances. Version 0.13.0.
+**[Download the latest APK](https://github.com/SamsDevForge/nook-widgets/releases/latest/download/Nook.apk)** · [Release and checksums](https://github.com/SamsDevForge/nook-widgets/releases/latest) · [Installation](#install) · [Build from source](#build)
 
-**[Download the latest APK](https://github.com/SamsDevForge/nook-widgets/releases/latest/download/Nook.apk)** · [Latest release and checksums](https://github.com/SamsDevForge/nook-widgets/releases/latest) · [Installation](#install) · [Build from source](#build) · [Verification report](dist/verification.md)
+**Android 9 or newer.** Install the APK, add a Nook widget from your launcher, then tap **···** to customize its tool, palette, and surface. See [design languages](#design-languages-and-customization), [motion and video](#animations-and-video), or the [verification report](dist/verification.md).
 
-Nook includes temporary and permanent notes, reminders, timer/alarm shortcuts, clocks, calendars, weather, personal trackers, redesigned music controls, animated scenes, photo slideshows and full-length silent video. Use a dedicated widget for one task or switch tools inside Universal. Everything uses native Android widgets and Java, with no third-party runtime libraries, ads, analytics or Nook account.
+Nook uses native Android widgets and Java. It runs without a Nook account and offers optional weather through Open-Meteo. Apple, macOS, Pixel, Samsung, and Nothing design catalogs include classic and Liquid Glass appearances.
 
 <p>
   <img src="dist/screenshots/animation-homescreen.png" width="220" alt="Animated Liquid Glass widget on the Android home screen" />
